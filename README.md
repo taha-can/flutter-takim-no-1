@@ -6,9 +6,10 @@ Takım X
 
 ## Takım Elemanları
 
-- John Doe: Product Owner
-- Jane Doe: Scrum Master
-- Atıl Samancıoğlu: Team Member/Developer
+- Elif Hilal Yaşar : Product Owner
+- Elif Hilal Yaşar : Scrum Master
+- Taha Yusuf Can : Team Member/Developer
+- Melih Dinçay : Team Member/Developer
 
 ## Ürün İsmi
 
