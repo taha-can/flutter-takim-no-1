@@ -9,7 +9,6 @@ Takım X
 - Elif Hilal Yaşar : Product Owner
 - Elif Hilal Yaşar : Scrum Master
 - Taha Yusuf Can : Team Member/Developer
-- Melih Dinçay : Team Member/Developer
 
 ## Ürün İsmi
 
