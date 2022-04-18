@@ -1,14 +1,15 @@
 # **Takım İsmi**
 
-Takım X
+numberOne, 3çiçek1böcek, venividivici, aragorn legolas gandalf gimli, 
 
 # Ürün İle İlgili Bilgiler
 
 ## Takım Elemanları
 
-- Elif Hilal Yaşar : Product Owner
 - Elif Hilal Yaşar : Scrum Master
 - Taha Yusuf Can : Team Member/Developer
+- Buse Ertek : Product Owner
+- Şevval Özgirgin : Team Member/Developer
 
 ## Ürün İsmi
 
@@ -16,6 +17,14 @@ Takım X
 
 ## Ürün Açıklaması
 
+- gezilecek yerler restoran otel müze uygulaması
+- e pati
+- makro müzik uygulaması gibi ortak film-dizi izleyen kişilerin buluşması,
+- üniversite öğrencilerini biraraya getiren bir sosyal arkadaşlık uygulaması
+- anlaşmalı yerlerde geçen kahve uygulaması
+- hidoctor
+- resim yetit app
+- 
 - Movie App uygulamamız ile insanların izlemek istediği filmlere ve dizilere daha kolay karar vermesini sağlayacağız. İçerisinde binlerce filmi barındıran uygulamamız aynı zamanda Netflix, Prime vb. platformlarda yayınlanıp yayınlanmadığını ve IMDB puanlarını da gösterecek.
 
 ## Ürün Özellikleri
