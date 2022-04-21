@@ -1,6 +1,6 @@
 # **Takım İsmi**
 
-numberOne, 3çiçek1böcek, venividivici, aragorn legolas gandalf gimli, 
+The Flutter Things
 
 # Ürün İle İlgili Bilgiler
 
@@ -17,13 +17,14 @@ numberOne, 3çiçek1böcek, venividivici, aragorn legolas gandalf gimli,
 
 ## Ürün Açıklaması
 
-- gezilecek yerler restoran otel müze uygulaması
 - e pati
-- makro müzik uygulaması gibi ortak film-dizi izleyen kişilerin buluşması,
-- üniversite öğrencilerini biraraya getiren bir sosyal arkadaşlık uygulaması
-- anlaşmalı yerlerde geçen kahve uygulaması
-- hidoctor
-- resim yetit app
+- anlaşmalı yerlerde geçen kahve uygulaması 
+- takas uygulaması*
+- come with me: ortak paylaşım etkinlik arkadaşlık/üniversite öğrencilerini biraraya getiren bir sosyal arkadaşlık uygulaması
+- saatlik: organizasyon şirket esnaf ve çalışan buluşması kişilerin saatlik ücreti
+- konum bilgisine göre meşhur ve tarihi anların, yerlerin, restoranların vb gösterimi
+- vale ile araba yıkama servisi
+- market  
 - 
 - Movie App uygulamamız ile insanların izlemek istediği filmlere ve dizilere daha kolay karar vermesini sağlayacağız. İçerisinde binlerce filmi barındıran uygulamamız aynı zamanda Netflix, Prime vb. platformlarda yayınlanıp yayınlanmadığını ve IMDB puanlarını da gösterecek.
 
