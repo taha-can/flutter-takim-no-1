@@ -17,37 +17,32 @@ The Flutter Things
 
 ## Ürün Açıklaması
 
-- e pati
-- anlaşmalı yerlerde geçen kahve uygulaması 
-- takas uygulaması*
-- come with me: ortak paylaşım etkinlik arkadaşlık/üniversite öğrencilerini biraraya getiren bir sosyal arkadaşlık uygulaması
-- saatlik: organizasyon şirket esnaf ve çalışan buluşması kişilerin saatlik ücreti
-- konum bilgisine göre meşhur ve tarihi anların, yerlerin, restoranların vb gösterimi
-- vale ile araba yıkama servisi
-- market  
-- 
-- Movie App uygulamamız ile insanların izlemek istediği filmlere ve dizilere daha kolay karar vermesini sağlayacağız. İçerisinde binlerce filmi barındıran uygulamamız aynı zamanda Netflix, Prime vb. platformlarda yayınlanıp yayınlanmadığını ve IMDB puanlarını da gösterecek.
+- Takas uygulamamız ile insanların sahip olduğu eşyaları herhangi bir ücret ödemeden diğer insanlar ile paylaşmasını sağlayacağız. İçerisinde takas yapmak istediğiniz onlarca kategoriyi kullanıcının seçimine bırakıp, kategoride yer alan ürünlerin detay bilgilerini, resimlerini, kullanım durumlarını ve güncel pazar fiyatlarını görüntülenmesini sağlayacağız. Karşıllıklı güvenin esas alındığı takas işlemi için sizleri takas noktalarında ağırlıyor olacağız.
 
 ## Ürün Özellikleri
 
-- Filmleri türüne göre ayırma
-- Filmlerin yönetmen, aktör, aktris vb. bilgilerini posteriyle birlikte gösterme
-- IMDB ve Rotten Tomatoes puanlarını gösterme
-- Netflix'te ve Prime'da bulunurluğunu gösterme
+- Ürünleri kategorilerine göre ayırma
+- Ürünün kullanım durumu, ürünün resmi, alındığı ücret, güncel pazar bilgilerini ürün ile birlikte gösterme
+- Takas noktalarının görüntülenmesi
+- Ürünlerin yorumlanabilmesi 
+- Takas bilgisinin bildirim olarak düşmesi
+- 
 
 ## Hedef Kitle
 
-- Netflix kullanıcıları
-- Prime kullanıcıları
-- Sinema severler
-- Dizi severler
+- Genel
+- App Store ve Play Store kullanıcıları
+- Öğrenciler
+- Çalışanlar
+- Ev hanımları
 - 15 - 65 yaş arası kullanıcılar
 
 ## Product Backlog URL
 
-[Miro Backlog Board](https://miro.com/app/board/uXjVOSSCpsI=/)
+[Miro Backlog Board] https://miro.com/app/board/uXjVO8Xk6Qg=/
 
----
+Proje backlog için belirlenen 27 maddenin ağırlığı 383 olarak belirlenmiştir.
+
 
 # Sprint 1
 
