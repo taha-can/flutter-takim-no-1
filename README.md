@@ -6,7 +6,7 @@ The Flutter Things
 
 ## Takım Elemanları
 
-- Buse Ertek : Product Owner
+- Busenur Ertek : Product Owner
 - Elif Hilal Yaşar : Scrum Master
 - Taha Yusuf Can : Team Member/Developer
 - Şevval Özgirgin : Team Member/Developer
