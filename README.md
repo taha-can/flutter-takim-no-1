@@ -13,11 +13,11 @@ The Flutter Things
 
 ## Ürün İsmi
 
---Movie App--
+TAKASLA
 
 ## Ürün Açıklaması
 
-- Takas uygulamamız ile insanların sahip olduğu eşyaları herhangi bir ücret ödemeden diğer insanlar ile paylaşmasını sağlayacağız. İçerisinde takas yapmak istediğiniz onlarca kategoriyi kullanıcının seçimine bırakıp, kategoride yer alan ürünlerin detay bilgilerini, resimlerini, kullanım durumlarını ve güncel pazar fiyatlarını görüntülenmesini sağlayacağız. Karşıllıklı güvenin esas alındığı takas işlemi için sizleri takas noktalarında ağırlıyor olacağız.
+- Takasla uygulamamız ile insanların sahip olduğu eşyaları herhangi bir ücret ödemeden diğer insanlar ile paylaşmasını sağlayacağız. İçerisinde takas yapmak istediğiniz onlarca kategoriyi kullanıcının seçimine bırakıp, kategoride yer alan ürünlerin detay bilgilerini, resimlerini, kullanım durumlarını ve güncel pazar fiyatlarını görüntülenmesini sağlayacağız. Karşıllıklı güvenin esas alındığı takas işlemi için sizleri takas noktalarında ağırlıyor olacağız.
 
 ## Ürün Özellikleri
 
