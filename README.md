@@ -41,22 +41,25 @@ TAKASLA
 
 [Miro Backlog Board] https://miro.com/app/board/uXjVO8Xk6Qg=/
 
-Proje backlog için belirlenen 27 maddenin ağırlığı 383 olarak belirlenmiştir.
+Proje backlog için belirlenen 33 maddenin ağırlığı 386 olarak belirlenmiştir.
 
 
 # Sprint 1
 
 - **Sprint Notları**: User Story'ler product backlog'ların içine yazılmıştır. Product backlog item'lara tıklandığında hikayelerin detayları okunabilir.
 
-- **Sprint içinde tamamlanması tahmin edilen puan**: 100 Puan
+- **Sprint içinde tamamlanması tahmin edilen puan**: 119 Puan
 
-- **Puan tamamlama mantığı**: Toplamda proje boyunca tamamlanması gereken 380 puanlık backlog bulunmaktadır. 4 sprint'e bölündüğünde ilk sprint'in en azından 100 ile başlaması gerektiğine karar verildi.
+- **Puan tamamlama mantığı**: Toplamda proje boyunca tamamlanması gereken 386 puanlık backlog bulunmaktadır. 3 sprint'e bölündüğünde ilk sprint'in en azından 119 puan ile başlaması gerektiğine karar verildi.
 
 - **Backlog düzeni ve Story seçimleri**: Backlog'umuz ilk yapılacak story'lere göre düzenlenmiştir. Sprint başına tahmin edilen puan sayısını geçmeyecek şekilde sıradan seçimler yapılmaktadır. Story başına çıkan tahmin puanı, toplam puanın yarısından az tutulmuştur. 
 
 Story'ler yapılacak işlere (task'lere) bölünmüştür. Miro Board'da gözüken kırmızı item'lar yapılacak işleri (task) gösterirken, mavi item'lar story'leri temsil etmektedir.
+Tasklar kendi içerisinde detaylandırılmış ve scrum metodolojisine uygun olarak ağırlıkları belirlenmiştir. 
 
-- **Daily Scrum**: Daily Scrum toplantılarının zamansal sebeplerden ötürü Slack üzerinden yapılmasına karar verilmiştir. Daily Scrum toplantısı örneği jpeg veya word olarak Readme'de tarafımızdan paylaşılmaktadır: [Sprint 1 Daily Scrum Chats](https://github.com/OyunveUygulamaAkademisi/BootcampScrumTemplate/blob/main/ProjectManagement/Sprint1Documents/DailyScrumMeetingNotesSprint1.docx?raw=true)
+- **Daily Scrum**: Daily Scrum toplantılarının zamansal sebeplerden, anlık ulaşım kolaylığı birden fazla ekran paylaşımı ve odalar ayrımı yapılabildiği için  Discord üzerinden yapılmasına karar verilmiştir. Discord üzerinden yapılan günlük toplantılarda ekip üyelerinin dün ne yaptım?, bugün ne yapacağım?, karşılaştığım sorunlar neler? soruları ile ilerleyerek daily notları alınıp proje tahtası olarak kabul edilen https://miro.com/app/board/uXjVO8Xk6Qg=/ de paylaşılmıştır.
+
+- Daily Scrum toplantısı örneği jpeg veya word olarak Readme'de tarafımızdan paylaşılmaktadır: [Sprint 1 Daily Scrum Chats](https://github.com/OyunveUygulamaAkademisi/BootcampScrumTemplate/blob/main/ProjectManagement/Sprint1Documents/DailyScrumMeetingNotesSprint1.docx?raw=true)
 
 - **Sprint board update**: Sprint board screenshotları: 
 ![Backlog 1](https://raw.githubusercontent.com/OyunveUygulamaAkademisi/BootcampScrumTemplate/main/ProjectManagement/Sprint1Documents/backlog1.png) 
