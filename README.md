@@ -59,11 +59,17 @@ Tasklar kendi içerisinde detaylandırılmış ve scrum metodolojisine uygun ola
 
 - **Daily Scrum**: Daily Scrum toplantılarının zamansal sebeplerden, anlık ulaşım kolaylığı birden fazla ekran paylaşımı ve odalar ayrımı yapılabildiği için  Discord üzerinden yapılmasına karar verilmiştir. Discord üzerinden yapılan günlük toplantılarda ekip üyelerinin dün ne yaptım?, bugün ne yapacağım?, karşılaştığım sorunlar neler? soruları ile ilerleyerek daily notları alınıp proje tahtası olarak kabul edilen https://miro.com/app/board/uXjVO8Xk6Qg=/ de paylaşılmıştır.
 
-- Daily Scrum toplantısı örneği jpeg veya word olarak Readme'de tarafımızdan paylaşılmaktadır: [sprint1/daily toplantısı 26.4.2022.png]
-- [Sprint 1 Daily Scrum Chats](https://github.com/OyunveUygulamaAkademisi/BootcampScrumTemplate/blob/main/ProjectManagement/Sprint1Documents/DailyScrumMeetingNotesSprint1.docx?raw=true)
+- Daily Scrum toplantısı örneği jpeg veya word olarak Readme'de tarafımızdan paylaşılmaktadır: 
+
+- [Sprint 1 Daily Scrum Chats]
+[https://github.com/taha-can/flutter-takim-no-1/tree/main/sprint1]
 
 
-- **Sprint board update**: Sprint board screenshotları: 
+
+
+
+- **Sprint board update**: Sprint board screenshotları:
+
 ![Backlog 1](https://github.com/taha-can/flutter-takim-no-1/blob/main/sprint1/proje%20backlog%20-1.sprint.PNG) 
 
 
