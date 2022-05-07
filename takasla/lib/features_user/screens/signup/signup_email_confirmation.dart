@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:takasla/features_user/screens/signup/signup_approval.dart';
 import 'package:takasla/main/constants.dart';
+import 'package:takasla/main/database_connection/firebase.dart';
 import 'package:takasla/main/ui_components.dart';
 
 import '../../models.dart';

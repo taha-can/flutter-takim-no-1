@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:takasla/features_user/screens/forgetpassword/forget_password_screen.dart';
 
 import 'package:takasla/main/constants.dart';
+
+import 'package:takasla/main/screens/main_body_screen.dart';
 import 'package:takasla/main/ui_components.dart';
 
 import '../../widgets/appbar.dart';
@@ -44,7 +46,7 @@ class _LoginScreenState extends State<LoginScreen> {
             //LoginButton
             CustomButton(
                 onPressed: () {
-                  print('Login');
+                  Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=> MainBodyScreen()));
                 },
                 child: Text('Giriş'),
                 color: colorOfMainTheme,

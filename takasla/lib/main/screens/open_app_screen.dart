@@ -3,9 +3,9 @@ import 'package:takasla/features_user/screens/login_screen.dart';
 import 'package:takasla/features_user/screens/signup/signup_screen.dart';
 import 'package:takasla/main/ui_components.dart';
 
+import '../../widgets/appbar.dart';
+import '../constants.dart';
 
-import '../widgets/appbar.dart';
-import 'constants.dart';
 
 class OpenAppScreen extends StatelessWidget {
   const OpenAppScreen({Key? key}) : super(key: key);
