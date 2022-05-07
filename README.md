@@ -80,6 +80,7 @@ Tasklar kendi içerisinde detaylandırılmış ve scrum metodolojisine uygun ola
      ![Screenshot 4](https://github.com/taha-can/flutter-takim-no-1/blob/main/sprint1/Simulator%20Screen%20Shot%20-%20iPhone%2012%20Pro%20-%202022-05-07%20at%2003.07.57.png)
       ![Screenshot 5](https://github.com/taha-can/flutter-takim-no-1/blob/main/sprint1/Simulator%20Screen%20Shot%20-%20iPhone%2012%20Pro%20-%202022-05-07%20at%2003.08.02.png)
        ![Screenshot 6](https://github.com/taha-can/flutter-takim-no-1/blob/main/sprint1/Simulator%20Screen%20Shot%20-%20iPhone%2012%20Pro%20-%202022-05-07%20at%2003.08.21.png)
+       ![Screenshot 7](https://github.com/taha-can/flutter-takim-no-1/blob/main/sprint1/Simulator%20Screen%20Shot%20-%20iPhone%2013%20Pro%20-%202022-05-07%20at%2006.31.01.png)
   
 
 - **Sprint Review**: 
