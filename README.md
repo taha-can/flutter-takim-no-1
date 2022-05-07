@@ -74,7 +74,12 @@ Tasklar kendi içerisinde detaylandırılmış ve scrum metodolojisine uygun ola
 
 
 - **Ürün Durumu**: Ekran görüntüleri:
-  ![Screenshot 1](https://github.com/OyunveUygulamaAkademisi/BootcampScrumTemplate/blob/main/ProjectManagement/Sprint1Documents/productss1.png?raw=true)
+  ![Screenshot 1](https://github.com/taha-can/flutter-takim-no-1/blob/main/sprint1/Simulator%20Screen%20Shot%20-%20iPhone%2012%20Pro%20-%202022-05-07%20at%2003.07.51.png)
+   ![Screenshot 2](https://github.com/taha-can/flutter-takim-no-1/blob/main/sprint1/Simulator%20Screen%20Shot%20-%20iPhone%2012%20Pro%20-%202022-05-07%20at%2003.07.53.png)
+    ![Screenshot 3](https://github.com/taha-can/flutter-takim-no-1/blob/main/sprint1/Simulator%20Screen%20Shot%20-%20iPhone%2012%20Pro%20-%202022-05-07%20at%2003.07.55.png)
+     ![Screenshot 4](https://github.com/taha-can/flutter-takim-no-1/blob/main/sprint1/Simulator%20Screen%20Shot%20-%20iPhone%2012%20Pro%20-%202022-05-07%20at%2003.07.57.png)
+      ![Screenshot 5](https://github.com/taha-can/flutter-takim-no-1/blob/main/sprint1/Simulator%20Screen%20Shot%20-%20iPhone%2012%20Pro%20-%202022-05-07%20at%2003.08.02.png)
+       ![Screenshot 6](https://github.com/taha-can/flutter-takim-no-1/blob/main/sprint1/Simulator%20Screen%20Shot%20-%20iPhone%2012%20Pro%20-%202022-05-07%20at%2003.08.21.png)
   
 
 - **Sprint Review**: 
