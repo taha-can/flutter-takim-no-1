@@ -41,16 +41,16 @@ TAKASLA
 
 [Miro Backlog Board] https://miro.com/app/board/uXjVO8Xk6Qg=/
 
-Proje backlog için belirlenen 33 maddenin ağırlığı 386 olarak belirlenmiştir.
+Proje backlog için belirlenen 46 maddenin ağırlığı 440 olarak belirlenmiştir.
 
 
 # Sprint 1
 
 - **Sprint Notları**: User Story'ler product backlog'ların içine yazılmıştır. Product backlog item'lara tıklandığında hikayelerin detayları okunabilir.
 
-- **Sprint içinde tamamlanması tahmin edilen puan**: 119 Puan
+- **Sprint içinde tamamlanması tahmin edilen puan**: 133 Puan
 
-- **Puan tamamlama mantığı**: Toplamda proje boyunca tamamlanması gereken 386 puanlık backlog bulunmaktadır. 3 sprint'e bölündüğünde ilk sprint'in en azından 119 puan ile başlaması gerektiğine karar verildi.
+- **Puan tamamlama mantığı**: Toplamda proje boyunca tamamlanması gereken 440 puanlık backlog bulunmaktadır. 3 sprint'e bölündüğünde ilk sprint'in en azından 133 puan ile başlaması gerektiğine karar verildi.
 
 - **Backlog düzeni ve Story seçimleri**: Backlog'umuz ilk yapılacak story'lere göre düzenlenmiştir. Sprint başına tahmin edilen puan sayısını geçmeyecek şekilde sıradan seçimler yapılmaktadır. Story başına çıkan tahmin puanı, toplam puanın yarısından az tutulmuştur. 
 
@@ -84,22 +84,77 @@ Tasklar kendi içerisinde detaylandırılmış ve scrum metodolojisine uygun ola
   
 
 - **Sprint Review**: 
-Alınan kararlar: Veritabanı oluşturması email ile toplanacak veriler için gerekli görülmüştür. Fakat bir yandan da veritabanı form sayfası için gerekli olmamıştır. O sebeple PBI bir sonraki sprint'e aktarılmıştır. Çıkan ürünün çalışmasında ve testlerinde bir problem görülmemiştir. Ekstra koyulması gereken özellikler belirlenmiştir. Sprint Review katılımcıları: ......
+ Sprint Review katılımcıları: Busenur Ertek, Şevval Özgirgin, Taha Yusuf Can, Elif Hilal Yaşar
+ 1. Sprint tahmin edilmesi gereken tahmini puan 133 ve sprint sonu tamamlanan puan 112 olarak hesaplanmıştır. Ürün için yapılması beklenen logo tasarımı maddesi bir sonraki sprinte aktarılmasına karar verilmiştir.
+ 2. Mobil ekranlar için yapılan tasarımların yeniden gözden geçirilip dizayn edilmesine karar verilmiş ve bir sonraki sprintte iş bölümü yapılmasına karar verilmiştir.
+ 3. Proje backlog planlama esnasında gündeme alınmayan "kullanıcı data yapılarının oluşturulması ve api testleri" maddesi backlog'a yansıtılmış ve sonraki sprintlerde gündeme alınmak üzere eklenmiştir.
+ 4. İlk sprint sonrası ortaya çıkan ürün testleri ve email ile onay kodu gönderim servisi başarılı bir şekilde çalışmıştır.
+ 5. Takas ürün ekleme ekranının ve kullanıcıyı karşılaştıran ana sayfanın detaylarında değişikliğe gidilerek yeniden tasarlanması karar verilmiştir.
+ 6. Proje backlog maddelerinde eklenmeyen "ürün giden teklif ve gelen teklif ekranları" maddesi yeni madde olarak eklenmesine karar verilmiştir.
+ 7. Kayıt ekranında telefon bilgisinin eklenmesine ve KVKK onay metninin eklenmesine karar verildi.
+ 8. Proje tasarım toplantılarında gündeme gelmeyen Popup dizayn tasarımları gündeme geldi ve etkili popup tasarımları yapılması için çalışma yapılacağı belirtildi.
 
 - **Sprint Retrospective:**
-  - Takım içindeki görev dağılımıyla ilgili düzenleme yapılması kararı alınmıştır
-  - Tahmin puanları gözden geçirilmeli ve sprint planlama toplantılarında gerekli geri bildirimlerin developer'lar tarafından verildiğine emin olunmalı
-  - Unit test'ler için ayrılan efor/saat arttırılmalı 
+  - Takım içindeki görev dağılımıyla ilgili herhangi bir sorun bulunulmadığı belirtildi.
+  - UI konusunda takım içerisinde yanlızlık çekildiği ve tasarımın daha canlı ve efektif olması gerektiği belirtildi.
+  - Sprint madde detayları ve madde için beklenen ekran dizaynına aktarıldığında örtüşmeyen konular gündeme geldi ve güncellemeler gerekti.
+  - Giriş ve kayıt ol ekranlarında UI olarak eksikilk yaşandığı gerekirse yeniden tasarlanabileceği belirtildi.
+  - Ekip üyelerinin farklı iş, okul ve yoğunluklarından dolayı iletişim eksikliği oluşmaması ve geri bildirimlerinin düzene oturtulması gerektiği belirtildi.
+  - Unit test'ler için ayrılan efor/saat arttırılması yapılmasına karar verildi.
+  - İlk sprint için her gün dailylerimiz gerçekleşti ancak daily saati güne başlarken yapılamamış günlük farklı saatlerde yapılmıştı (ekip içerisindeki farklı yoğunluklar nedeni ile), yeni sprintte artık güne başlarken sabah 9:30 için daily saati güncellendi.
 
 -**Diğer Notlar**:
-- N/A
-
----
+- Proje backlog için ilk aşamada 33 madde ve 390 puan hesaplanmıştı. İlk sprint sonrası belirlenen maddelerin yetersiz olduğu, bazı maddelerin gündeme alınmadığı ve müşterinin yeni ek ve talepleri doğrultusunda sprint backlog maddeleri güncellenmiş ve proje ağırlığı için toplam 44 madde/440 puana çıkartılmıştır.
+- İlk sprint 112 puan eritilmiş, 328 puan eritilmeyi bekleyen maddemiz bulunmaktadır.
 
 # Sprint 2
 
+- **Sprint Notları**: İkinci sprint başlangıç tarihinde sprinte başlanmış ve sprint planlama toplantısı gerçekleştirilmiştir.
 
----
+- **Sprint içinde tamamlanması tahmin edilen puan**: 170 Puan
+
+- **Puan tamamlama mantığı**: Toplamda proje boyunca tamamlanması gereken 440 puanlık backlog bulunmaktadır. İlk sprint 112 puan eritilmiş ve bu sprintte ilk sprintin altına düşmeden, mobil uygulamanın iskeletinin de oluşturulması tamamlandığı için büyüyen ivme gösterme amacı ile ikinci sprintte 170 puan eritmek planlandı.
+
+- **Backlog düzeni ve Story seçimleri**: Backlog'umuz ilk yapılacak story'lere göre düzenlenmiştir. Sprint başına tahmin edilen puan sayısını geçmeyecek şekilde sıradan seçimler yapılmaktadır. Story başına çıkan tahmin puanı, toplam puanın yarısından az tutulmuştur. 
+
+Story'ler yapılacak işlere (task'lere) bölünmüştür. Miro Board'da gözüken kırmızı item'lar yapılacak işleri (task) gösterirken, mavi item'lar story'leri temsil etmektedir.
+Tasklar kendi içerisinde detaylandırılmış ve scrum metodolojisine uygun olarak ağırlıkları belirlenmiştir. 
+
+- **Daily Scrum**: Daily Scrum toplantılarının zamansal sebeplerden, anlık ulaşım kolaylığı birden fazla ekran paylaşımı ve odalar ayrımı yapılabildiği için  Discord üzerinden yapılmasına karar verilmiştir. Discord üzerinden yapılan günlük toplantılarda ekip üyelerinin dün ne yaptım?, bugün ne yapacağım?, karşılaştığım sorunlar neler? soruları ile ilerleyerek daily notları alınıp proje tahtası olarak kabul edilen https://miro.com/app/board/uXjVO8Xk6Qg=/ de paylaşılmıştır.
+
+- Daily Scrum toplantısı örneği jpeg veya word olarak Readme'de tarafımızdan paylaşılmaktadır: 
+
+- [Sprint 1 Daily Scrum Chats]
+[https://github.com/taha-can/flutter-takim-no-1/tree/main/sprint1]
+
+
+- **Sprint board update**: Sprint board screenshotları:
+
+![Backlog 1](https://github.com/taha-can/flutter-takim-no-1/blob/main/sprint1/proje%20backlog%20-1.sprint.PNG) 
+
+
+- **Ürün Durumu**: Ekran görüntüleri:
+  ![Screenshot 1](https://github.com/taha-can/flutter-takim-no-1/blob/main/sprint1/Simulator%20Screen%20Shot%20-%20iPhone%2012%20Pro%20-%202022-05-07%20at%2003.07.51.png)
+ 
+
+- **Sprint Review**: 
+ Sprint Review katılımcıları: Busenur Ertek, Şevval Özgirgin, Taha Yusuf Can, Elif Hilal Yaşar
+ 1. 
+
+- **Sprint Retrospective:**
+  - 
+
+-**Diğer Notlar**:
+- 
+
+
+
+
+
+- **Sprint board update**: Sprint board screenshotları:
+
+![Backlog 1](https://github.com/taha-can/flutter-takim-no-1/blob/main/sprint1/proje%20backlog%20-1.sprint.PNG) 
+
 
 # Sprint 3
 
