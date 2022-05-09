@@ -93,6 +93,7 @@ Tasklar kendi içerisinde detaylandırılmış ve scrum metodolojisine uygun ola
  6. Proje backlog maddelerinde eklenmeyen "ürün giden teklif ve gelen teklif ekranları" maddesi yeni madde olarak eklenmesine karar verilmiştir.
  7. Kayıt ekranında telefon bilgisinin eklenmesine ve KVKK onay metninin eklenmesine karar verildi.
  8. Proje tasarım toplantılarında gündeme gelmeyen Popup dizayn tasarımları gündeme geldi ve etkili popup tasarımları yapılması için çalışma yapılacağı belirtildi.
+ ![Sprint Review](https://github.com/taha-can/flutter-takim-no-1/blob/main/sprint1/sprint1-son.PNG)
 
 - **Sprint Retrospective:**
   - Takım içindeki görev dağılımıyla ilgili herhangi bir sorun bulunulmadığı belirtildi.
@@ -102,6 +103,7 @@ Tasklar kendi içerisinde detaylandırılmış ve scrum metodolojisine uygun ola
   - Ekip üyelerinin farklı iş, okul ve yoğunluklarından dolayı iletişim eksikliği oluşmaması ve geri bildirimlerinin düzene oturtulması gerektiği belirtildi.
   - Unit test'ler için ayrılan efor/saat arttırılması yapılmasına karar verildi.
   - İlk sprint için her gün dailylerimiz gerçekleşti ancak daily saati güne başlarken yapılamamış günlük farklı saatlerde yapılmıştı (ekip içerisindeki farklı yoğunluklar nedeni ile), yeni sprintte artık güne başlarken sabah 9:30 için daily saati güncellendi.
+  ![Sprint Retrospective](https://github.com/taha-can/flutter-takim-no-1/blob/main/sprint1/sprint%20retrospective.PNG)
 
 -**Diğer Notlar**:
 - Proje backlog için ilk aşamada 33 madde ve 390 puan hesaplanmıştı. İlk sprint sonrası belirlenen maddelerin yetersiz olduğu, bazı maddelerin gündeme alınmadığı ve müşterinin yeni ek ve talepleri doğrultusunda sprint backlog maddeleri güncellenmiş ve proje ağırlığı için toplam 44 madde/440 puana çıkartılmıştır.
