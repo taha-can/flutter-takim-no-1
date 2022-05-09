@@ -57,7 +57,12 @@ Proje backlog için belirlenen 46 maddenin ağırlığı 440 olarak belirlenmiş
 Story'ler yapılacak işlere (task'lere) bölünmüştür. Miro Board'da gözüken kırmızı item'lar yapılacak işleri (task) gösterirken, mavi item'lar story'leri temsil etmektedir.
 Tasklar kendi içerisinde detaylandırılmış ve scrum metodolojisine uygun olarak ağırlıkları belirlenmiştir. 
 
-- **Daily Scrum**: Daily Scrum toplantılarının zamansal sebeplerden, anlık ulaşım kolaylığı birden fazla ekran paylaşımı ve odalar ayrımı yapılabildiği için  Discord üzerinden yapılmasına karar verilmiştir. Discord üzerinden yapılan günlük toplantılarda ekip üyelerinin dün ne yaptım?, bugün ne yapacağım?, karşılaştığım sorunlar neler? soruları ile ilerleyerek daily notları alınıp proje tahtası olarak kabul edilen https://miro.com/app/board/uXjVO8Xk6Qg=/ de paylaşılmıştır.
+- **Daily Scrum**: Daily Scrum toplantılarının zamansal sebeplerden, anlık ulaşım kolaylığı birden fazla ekran paylaşımı ve odalar ayrımı yapılabildiği için  Discord üzerinden yapılmasına karar verilmiştir. 
+![Discord Ekran Görüntüsü](https://github.com/taha-can/flutter-takim-no-1/blob/1b2f222111d8f3409062c042f36058cf58069f24/sprint1/tak%C4%B1m%20discord%20kanal%C4%B1.PNG)
+Toplantı planları ise Miro üzerinde önceden scruma uygun şekilde süreleri ve günleri ile tanımlanmıştır.
+![Sprint Toplantı Planları] (https://github.com/taha-can/flutter-takim-no-1/blob/1b2f222111d8f3409062c042f36058cf58069f24/sprint1/sprint%20toplant%C4%B1%20planlar%C4%B1.PNG)
+
+Discord üzerinden yapılan günlük toplantılarda ekip üyelerinin dün ne yaptım?, bugün ne yapacağım?, karşılaştığım sorunlar neler? soruları ile ilerleyerek daily notları alınıp proje tahtası olarak kabul edilen https://miro.com/app/board/uXjVO8Xk6Qg=/ de paylaşılmıştır.
 
 - Daily Scrum toplantısı örneği jpeg veya word olarak Readme'de tarafımızdan paylaşılmaktadır: 
 
@@ -69,8 +74,10 @@ Tasklar kendi içerisinde detaylandırılmış ve scrum metodolojisine uygun ola
 
 
 - **Sprint board update**: Sprint board screenshotları:
-
+Sprint 1
 ![Backlog 1](https://github.com/taha-can/flutter-takim-no-1/blob/main/sprint1/proje%20backlog%20-1.sprint.PNG) 
+Sprint 2
+
 
 
 - **Ürün Durumu**: Ekran görüntüleri:
