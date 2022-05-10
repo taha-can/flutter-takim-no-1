@@ -46,9 +46,9 @@ class _MainBodyScreenState extends State<MainBodyScreen> {
       unselectedItemColor: colorOfMainTheme,
       backgroundColor:colorOfMainTheme, items: [
       BottomNavigationBarItem(icon: Icon(Icons.home),label: 'AnaSayfa'),
-      BottomNavigationBarItem(icon: Icon(Icons.add_alert),label: 'Bildirimler'),
+      BottomNavigationBarItem(icon: Icon(Icons.notifications),label: 'Bildirimler'),
       BottomNavigationBarItem(icon: Icon(Icons.repeat),label: 'Takasla'),
-      BottomNavigationBarItem(icon: Icon(Icons.shopping_basket),label: 'Sepetim'),
+      BottomNavigationBarItem(icon: Icon(Icons.local_offer),label: 'Tekliflerim'),
       BottomNavigationBarItem(icon: Icon(Icons.person),label: 'Profilim'),
 
     ],

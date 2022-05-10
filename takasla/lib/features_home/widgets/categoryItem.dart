@@ -2,19 +2,29 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:takasla/main/constants.dart';
 
-categoryItem(){
+categoryItem(categoryName,imageUrl){
   return Container(
-    child: Card(
-      child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Image.asset('assets/images/takasla.png',width: 100,),
-              SizedBox(height: 10,),
-              Text('Kategori'),
-            ],
-          )),
+    child: ElevatedButton(
+      style: ButtonStyle(
+        overlayColor: MaterialStateProperty.all(Colors.purpleAccent),
+        padding: MaterialStateProperty.all(EdgeInsets.all(0)),
+        backgroundColor: MaterialStateProperty.all(Colors.white),
+      ),
+      onPressed: (){print(categoryName);},
+      child: Card(
+        shadowColor: Colors.transparent,
+        child: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Image.network(imageUrl,width: 80,),
+                SizedBox(height: 10,),
+                Text(categoryName),
+              ],
+            )),
+      ),
     ),
   );
 }
