@@ -72,11 +72,12 @@ class _SignUpScreenState extends State<SignUpScreen> {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 120),
               child: isLoading
-                  ? CircularProgressIndicator()
+                  ? CircularProgressIndicator(
+                      color: colorOfMainTheme,
+                    )
                   : CustomButton(
                       onPressed: () async {
                         var _checkData = checkData();
-
                         if (_checkData) {
                           bool passCheck = controllerPassword.text ==
                                   controllerRePassword.text
@@ -281,122 +282,58 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
     return result;
   }
-  
-  
-  
-  
-  
-  buildSignUpKVKK() { 
 
-  return Container( 
+  buildSignUpKVKK() {
+    return Container(
+      padding: EdgeInsets.all(8),
+      alignment: Alignment.center,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Checkbox(
+            value: check,
+            onChanged: (bool? value) {},
+          ),
+          TextButton(
+              onPressed: () {
+                _showMyDialog();
+              },
+              child: Text('KVKK metnini onaylıyorum.'))
+        ],
+      ),
+    );
+  }
 
-    padding: EdgeInsets.all(8), 
+  Future<void> _showMyDialog() async {
+    return showDialog<void>(
+      context: context,
 
-    alignment: Alignment.center, 
+      barrierDismissible: false, // user must tap button!
 
-    child: Row( 
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: const Text('KVKK Metni'),
+          content: SingleChildScrollView(
+            child: ListBody(
+              children: const <Widget>[
+                Text('KVKK metninin içeriği'),
+              ],
+            ),
+          ),
+          actions: <Widget>[
+            TextButton(
+              child: const Text('Onaylıyorum'),
+              onPressed: () {
+                setState(() {
+                  check = true;
+                });
 
-      mainAxisAlignment: MainAxisAlignment.center, 
-
-      children: [ 
-
-        Checkbox( 
-
-          value: check, 
-
-          onChanged: (bool? value) {}, 
-
-        ), 
-
-        TextButton(onPressed: (){_showMyDialog();}, child: Text('KVKK metnini onaylıyorum.') ) 
-
-      ], 
-
-    ), 
-
-  ); 
-
-} 
-
- 
-
-Future<void> _showMyDialog() async { 
-
-  return showDialog<void>( 
-
-    context: context, 
-
-    barrierDismissible: false, // user must tap button! 
-
-    builder: (BuildContext context) { 
-
-      return AlertDialog( 
-
-        title: const Text('KVKK Metni'), 
-
-        content: SingleChildScrollView( 
-
-          child: ListBody( 
-
-            children: const <Widget>[ 
-
-              Text('KVKK metninin içeriği'), 
-
- 
-
-            ], 
-
-          ), 
-
-        ), 
-
-        actions: <Widget>[ 
-
-          TextButton( 
-
-            child: const Text('Onaylıyorum'), 
-
-            onPressed: () { 
-
-              setState((){ 
-
-                check = true; 
-
-              }); 
-
-              Navigator.of(context).pop(); 
-
-            }, 
-
-          ), 
-
-        ], 
-
-      ); 
-
-    }, 
-
-  ); 
-
-} 
-
- 
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+                Navigator.of(context).pop();
+              },
+            ),
+          ],
+        );
+      },
+    );
+  }
 }
-
-
