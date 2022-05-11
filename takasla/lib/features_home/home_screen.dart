@@ -12,30 +12,65 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Padding(
+        body: Container(
       padding: EdgeInsets.all(8.0),
       child: Container(
-        child: GridView.count(
-          crossAxisCount: 3,
-          mainAxisSpacing: 5,
-          crossAxisSpacing: 5,
+        child: ListView(
           children: [
-            categoryItem('Ev Yaşam', 'https://cdn-icons-png.flaticon.com/512/3163/3163176.png'),
-            categoryItem('Elektronik','https://cdn-icons-png.flaticon.com/512/3163/3163187.png'),
-            categoryItem('Giyim','https://cdn-icons-png.flaticon.com/512/3163/3163210.png'),
-            categoryItem('Spor','https://cdn-icons-png.flaticon.com/512/3163/3163214.png'),
-            categoryItem('Spor','https://cdn-icons-png.flaticon.com/512/3163/3163214.png'),
-            categoryItem('Spor','https://cdn-icons-png.flaticon.com/512/3163/3163214.png'),
-            categoryItem('Spor','https://cdn-icons-png.flaticon.com/512/3163/3163214.png'),
-            categoryItem('Spor','https://cdn-icons-png.flaticon.com/512/3163/3163214.png'),
-            categoryItem('Spor','https://cdn-icons-png.flaticon.com/512/3163/3163214.png'),
-            categoryItem('Spor','https://cdn-icons-png.flaticon.com/512/3163/3163214.png'),
-            categoryItem('Spor','https://cdn-icons-png.flaticon.com/512/3163/3163214.png'),
-            categoryItem('Spor','https://cdn-icons-png.flaticon.com/512/3163/3163214.png'),
-            categoryItem('Spor','https://cdn-icons-png.flaticon.com/512/3163/3163214.png'),
-            categoryItem('Spor','https://cdn-icons-png.flaticon.com/512/3163/3163214.png'),
-            categoryItem('Spor','https://cdn-icons-png.flaticon.com/512/3163/3163214.png'),
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  Card(
+                      child: Container(
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                            image: AssetImage('assets/images/takasla.png')
+                          )
+                        ),
+                    height: MediaQuery.of(context).size.height / 5,
+                    width: MediaQuery.of(context).size.width / 1.2,
+                    child: Align(alignment:Alignment.bottomCenter,child: Text('Kampanya')),
+                  )),
+                  Card(
+                      child: Container(
+                        decoration: BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage('assets/images/takasla.png')
+                            )
+                        ),
+                        height: MediaQuery.of(context).size.height / 5,
+                        width: MediaQuery.of(context).size.width / 1.2,
+                        child: Align(alignment:Alignment.bottomCenter,child: Text('Kampanya')),
+                      )),
 
+                ],
+              ),
+            ),
+            Expanded(
+              child: GridView.count(
+                padding: EdgeInsets.all(8),
+                physics: NeverScrollableScrollPhysics(),
+                shrinkWrap: true,
+                crossAxisCount: 3,
+                mainAxisSpacing: 5,
+                crossAxisSpacing: 5,
+                children: [
+                  categoryItem('Ev Yaşam',
+                      'https://cdn-icons-png.flaticon.com/512/3163/3163176.png'),
+                  categoryItem('Elektronik',
+                      'https://cdn-icons-png.flaticon.com/512/3163/3163187.png'),
+                  categoryItem('Giyim',
+                      'https://cdn-icons-png.flaticon.com/512/3163/3163210.png'),
+                  categoryItem('Spor',
+                      'https://cdn-icons-png.flaticon.com/512/3163/3163214.png'),
+                  categoryItem('Spor',
+                      'https://cdn-icons-png.flaticon.com/512/3163/3163214.png'),
+                  categoryItem('Spor',
+                      'https://cdn-icons-png.flaticon.com/512/3163/3163214.png'),
+                ],
+              ),
+            ),
           ],
         ),
       ),

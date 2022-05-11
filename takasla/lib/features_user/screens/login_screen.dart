@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:hive/hive.dart';
 import 'package:takasla/features_user/screens/forgetpassword/forget_password_screen.dart';
-
 import 'package:takasla/main/constants.dart';
-
 import 'package:takasla/main/screens/main_body_screen.dart';
 import 'package:takasla/main/ui_components.dart';
-
 import '../../widgets/appbar.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -18,11 +16,13 @@ class LoginScreen extends StatefulWidget {
 class _LoginScreenState extends State<LoginScreen> {
   TextEditingController controllerEmail = TextEditingController();
   TextEditingController controllerPassword = TextEditingController();
+  bool isChecked = false;
   void dispose() {
     controllerPassword.dispose();
     controllerEmail.dispose();
     super.dispose();
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,19 +35,18 @@ class _LoginScreenState extends State<LoginScreen> {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Container(
-        margin: EdgeInsets.only(top: MediaQuery.of(context).size.height/12),
+        margin: EdgeInsets.only(top: MediaQuery.of(context).size.height / 12),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             buildLoginMailField(),
             buildLoginPasswordField(),
             buildForgetPasswordButton(),
+            buildRememberMeCheck(),
             //ForgetPassword
             //LoginButton
             CustomButton(
-                onPressed: () {
-                  Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=> MainBodyScreen()));
-                },
+                onPressed: sendLoginForm,
                 child: Text('Giriş'),
                 color: colorOfMainTheme,
                 width: 100)
@@ -57,6 +56,19 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 
+  sendLoginForm() async {
+    if (isChecked) {
+      var cred = await Hive.openBox('localLogin');
+      cred.put('email', controllerEmail.text);
+      cred.put('password',controllerPassword.text);
+          Navigator.of(context).pushReplacement(
+          MaterialPageRoute(builder: (context) => MainBodyScreen()));
+    } else {
+      Navigator.of(context).pushReplacement(
+          MaterialPageRoute(builder: (context) => MainBodyScreen()));
+    }
+  }
+
   buildLoginMailField() {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
@@ -64,32 +76,70 @@ class _LoginScreenState extends State<LoginScreen> {
         Padding(
           padding: const EdgeInsets.all(10.0),
           child: Container(
-            alignment: Alignment.center,
-            width: MediaQuery.of(context).size.width / 1.4,
-            child:CustomInput(color: colorOfMainTheme, controller: controllerEmail, labelText: 'E-mail',isPassword: false,maxlength: 100,)
-          ),
+              alignment: Alignment.center,
+              width: MediaQuery.of(context).size.width / 1.4,
+              child: CustomInput(
+                color: colorOfMainTheme,
+                controller: controllerEmail,
+                labelText: 'E-mail',
+                isPassword: false,
+                maxlength: 100,
+              )),
         ),
       ],
     );
   }
-  buildLoginPasswordField() {
-    return
-      Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(10.0),
-            child: Container(
-                alignment: Alignment.center,
-                width: MediaQuery.of(context).size.width / 1.4,
-                child:CustomInput(color: colorOfMainTheme, controller: controllerPassword, labelText: 'Password',isPassword: true,maxlength: 100,)
-            ),
-          ),
-        ],
-      );
 
+  buildLoginPasswordField() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Padding(
+          padding: const EdgeInsets.all(10.0),
+          child: Container(
+              alignment: Alignment.center,
+              width: MediaQuery.of(context).size.width / 1.4,
+              child: CustomInput(
+                color: colorOfMainTheme,
+                controller: controllerPassword,
+                labelText: 'Password',
+                isPassword: true,
+                maxlength: 100,
+              )),
+        ),
+      ],
+    );
   }
+
   buildForgetPasswordButton() {
-    return Align(alignment:Alignment.center,child: TextButton(onPressed: (){Navigator.of(context).push(MaterialPageRoute(builder: (context) => const ForgetPasswordScreen() ));}, child: Text('Şifremi Unuttum')));
+    return Align(
+        alignment: Alignment.center,
+        child: TextButton(
+            onPressed: () {
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => const ForgetPasswordScreen()));
+            },
+            child: Text('Şifremi Unuttum')));
+  }
+
+  buildRememberMeCheck() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Checkbox(
+            activeColor: colorOfMainTheme,
+            checkColor: Colors.white,
+            value: isChecked,
+            onChanged: (bool? value) {
+              setState(() {
+                isChecked = value!;
+              });
+            }),
+        Text(
+          'Beni Hatırla',
+          style: TextStyle(color: colorOfMainTheme),
+        )
+      ],
+    );
   }
 }

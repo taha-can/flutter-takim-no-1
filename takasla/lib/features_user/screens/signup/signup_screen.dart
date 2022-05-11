@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:takasla/features_user/models.dart';
 import 'package:takasla/features_user/screens/signup/signup_email_confirmation.dart';
 import 'package:takasla/main/constants.dart';
@@ -178,10 +179,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
           child: Container(
               alignment: Alignment.center,
               width: MediaQuery.of(context).size.width / 1.4,
-              child: CustomNumberInput(
+              child: CustomDateNumberInput(
                 color: colorOfMainTheme,
                 controller: controllerBirthday,
-                labelText: 'Doğum Tarihiniz 01/01/1980',
+                labelText: 'Doğum Tarihiniz:  Gün/Ay/Yıl',
                 isPassword: false,
                 maxlength: 100,
               )),
@@ -279,3 +280,5 @@ class _SignUpScreenState extends State<SignUpScreen> {
     return result;
   }
 }
+
+

@@ -4,8 +4,10 @@
 
 import 'package:flutter/material.dart';
 import 'package:takasla/main/constants.dart';
+import 'package:takasla/main/ui_components.dart';
 
 buildMainScreenAppBar(){
+
   return AppBar(
     elevation: 0,
     backgroundColor: Colors.transparent,
@@ -15,15 +17,25 @@ buildMainScreenAppBar(){
       children: [
         Row(
           children: [
-            Text('Merhaba Aylin',style: TextStyle(color: colorOfMainTheme),)
-            
+            Text('Merhaba Aylin',style: TextStyle(color: colorOfMainTheme),),
           ],
         ),
 
       ],
     ),
     actions: [
-      IconButton(onPressed: (){}, icon: Icon(Icons.filter_alt_rounded,color: colorOfMainTheme,))
+      Padding(
+        padding: const EdgeInsets.all(5.0),
+        child: Row(
+          children: [
+            Icon(Icons.star_border,color: colorOfMainTheme,),
+            Icon(Icons.star_border,color: colorOfMainTheme,),
+            Icon(Icons.star_border,color: colorOfMainTheme,),
+            Icon(Icons.star_border,color: colorOfMainTheme,),
+            Icon(Icons.star_border,color: colorOfMainTheme,),
+          ],
+        ),
+      ),
     ],
   );
 }
