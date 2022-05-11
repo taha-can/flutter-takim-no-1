@@ -22,6 +22,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
   TextEditingController controllerPassword = TextEditingController();
   TextEditingController controllerRePassword = TextEditingController();
   var isLoading = false;
+  var check = false;
 
   @override
   void dispose() {
@@ -66,6 +67,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
             buildSignUpBirthdayField(),
             buildSignUpEmailField(),
             buildSignUpPasswordField(),
+            buildSignUpKVKK(),
 
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 120),
@@ -279,6 +281,122 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
     return result;
   }
+  
+  
+  
+  
+  
+  buildSignUpKVKK() { 
+
+  return Container( 
+
+    padding: EdgeInsets.all(8), 
+
+    alignment: Alignment.center, 
+
+    child: Row( 
+
+      mainAxisAlignment: MainAxisAlignment.center, 
+
+      children: [ 
+
+        Checkbox( 
+
+          value: check, 
+
+          onChanged: (bool? value) {}, 
+
+        ), 
+
+        TextButton(onPressed: (){_showMyDialog();}, child: Text('KVKK metnini onaylıyorum.') ) 
+
+      ], 
+
+    ), 
+
+  ); 
+
+} 
+
+ 
+
+Future<void> _showMyDialog() async { 
+
+  return showDialog<void>( 
+
+    context: context, 
+
+    barrierDismissible: false, // user must tap button! 
+
+    builder: (BuildContext context) { 
+
+      return AlertDialog( 
+
+        title: const Text('KVKK Metni'), 
+
+        content: SingleChildScrollView( 
+
+          child: ListBody( 
+
+            children: const <Widget>[ 
+
+              Text('KVKK metninin içeriği'), 
+
+ 
+
+            ], 
+
+          ), 
+
+        ), 
+
+        actions: <Widget>[ 
+
+          TextButton( 
+
+            child: const Text('Onaylıyorum'), 
+
+            onPressed: () { 
+
+              setState((){ 
+
+                check = true; 
+
+              }); 
+
+              Navigator.of(context).pop(); 
+
+            }, 
+
+          ), 
+
+        ], 
+
+      ); 
+
+    }, 
+
+  ); 
+
+} 
+
+ 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 }
 
 
