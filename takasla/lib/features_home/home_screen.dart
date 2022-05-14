@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:takasla/features_home/widgets/categoryItem.dart';
+import 'package:takasla/main/constants.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -23,26 +24,132 @@ class _HomeScreenState extends State<HomeScreen> {
                 children: [
                   Card(
                       child: Container(
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                            image: AssetImage('assets/images/takasla.png')
-                          )
-                        ),
+                    decoration: BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage('assets/images/takasla.png'))),
                     height: MediaQuery.of(context).size.height / 5,
                     width: MediaQuery.of(context).size.width / 1.2,
-                    child: Align(alignment:Alignment.bottomCenter,child: Text('Kampanya')),
+                    child: Align(
+                        alignment: Alignment.bottomCenter,
+                        child: Text('Kampanya')),
                   )),
                   Card(
                       child: Container(
-                        decoration: BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage('assets/images/takasla.png')
-                            )
+                    decoration: BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage('assets/images/takasla.png'))),
+                    height: MediaQuery.of(context).size.height / 5,
+                    width: MediaQuery.of(context).size.width / 1.2,
+                    child: Align(
+                        alignment: Alignment.bottomCenter,
+                        child: Text('Kampanya')),
+                  )),
+                ],
+              ),
+            ),
+            Container(
+              child: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      padding: EdgeInsets.all(8),
+                      child: Card(
+                        child: Container(
+                          alignment: Alignment.center,
+                            width: 100,
+                            padding: EdgeInsets.all(8),
+                            child: Text(
+                              'Ev&Yaşam',
+                              style: TextStyle(color: colorOfMainTheme),
+                            )),
+                      ),
+                    ),
+                    Container(
+                      padding: EdgeInsets.all(8),
+                      child: Card(
+                        child: Container(
+                            alignment: Alignment.center,
+                            width: 100,
+                            padding: EdgeInsets.all(8),
+                            child: Text(
+                              'Kıyafet',
+                              style: TextStyle(color: colorOfMainTheme),
+                            )),
+                      ),
+                    ),
+                    Container(
+                      padding: EdgeInsets.all(8),
+                      child: Card(
+                        child: Container(
+                            alignment: Alignment.center,
+                            width: 100,
+                            padding: EdgeInsets.all(8),
+                            child: Text(
+                              'Eğitim',
+                              style: TextStyle(color: colorOfMainTheme),
+                            )),
+                      ),
+                    ),
+
+
+                  ],),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Container(
+                        padding: EdgeInsets.all(8),
+                        child: Card(
+
+                          child: Container(
+                              alignment: Alignment.center,
+                              width: 100,
+                              padding: EdgeInsets.all(8),
+                              child: Text(
+                                'Spor',
+                                style: TextStyle(color: colorOfMainTheme),
+                              )),
                         ),
-                        height: MediaQuery.of(context).size.height / 5,
-                        width: MediaQuery.of(context).size.width / 1.2,
-                        child: Align(alignment:Alignment.bottomCenter,child: Text('Kampanya')),
-                      )),
+                      ),
+                      Container(
+                        padding: EdgeInsets.all(8),
+                        child: Card(
+                          child: Container(
+                              alignment: Alignment.center,
+                              width: 100,
+                              padding: EdgeInsets.all(8),
+                              child: Text(
+                                'Elektronik',
+                                style: TextStyle(color: colorOfMainTheme),
+                              )),
+                        ),
+                      ),
+                      Container(
+                        padding: EdgeInsets.all(8),
+                        child: Card(
+                          child: Container(
+                              alignment: Alignment.center,
+                              width: 100,
+                              padding: EdgeInsets.all(8),
+                              child: Column(
+                                children: [
+                                  Text(
+                                    'Biletler',
+                                    style: TextStyle(color: colorOfMainTheme),
+                                  ),
+                                  Text(
+                                    'Kuponlar',
+                                    style: TextStyle(color: colorOfMainTheme),
+                                  ),
+                                ],
+                              )),
+                        ),
+                      ),
+
+
+                    ],),
+
 
                 ],
               ),
@@ -56,17 +163,11 @@ class _HomeScreenState extends State<HomeScreen> {
                 mainAxisSpacing: 5,
                 crossAxisSpacing: 5,
                 children: [
-                  categoryItem('Ev Yaşam',
+                  categoryItem('Ürün',
                       'https://cdn-icons-png.flaticon.com/512/3163/3163176.png'),
-                  categoryItem('Elektronik',
-                      'https://cdn-icons-png.flaticon.com/512/3163/3163187.png'),
-                  categoryItem('Giyim',
-                      'https://cdn-icons-png.flaticon.com/512/3163/3163210.png'),
-                  categoryItem('Spor',
-                      'https://cdn-icons-png.flaticon.com/512/3163/3163214.png'),
-                  categoryItem('Spor',
-                      'https://cdn-icons-png.flaticon.com/512/3163/3163214.png'),
-                  categoryItem('Spor',
+                  categoryItem('Ürün',
+                      'https://cdn-icons-png.flaticon.com/512/3163/3163176.png'),
+                  categoryItem('Ürün',
                       'https://cdn-icons-png.flaticon.com/512/3163/3163214.png'),
                 ],
               ),

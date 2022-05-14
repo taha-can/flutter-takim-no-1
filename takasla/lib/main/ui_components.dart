@@ -284,8 +284,6 @@ class NumberDateInput extends StatelessWidget {
     ]);
 
 }}
-
-
 class _DateFormatter extends TextInputFormatter {
   @override
   TextEditingValue formatEditUpdate(

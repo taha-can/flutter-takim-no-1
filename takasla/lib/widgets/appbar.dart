@@ -8,7 +8,7 @@ buildAppBar(){
     title: Text('Takasla',style: TextStyle(
       color: colorOfMainTheme,
       fontSize: 30,
-      fontFamily: 'Poppins',
+      fontFamily: generalFont,
     ),),
     backgroundColor: Colors.transparent,
     elevation: 0,

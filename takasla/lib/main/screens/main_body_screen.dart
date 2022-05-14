@@ -6,6 +6,7 @@ import 'package:takasla/features_user_profile/screens/profile_screen.dart';
 import 'package:takasla/main/constants.dart';
 
 
+
 import '../../features_home/home_screen.dart';
 import '../../widgets/main_body_appbar.dart';
 
@@ -41,10 +42,10 @@ class _MainBodyScreenState extends State<MainBodyScreen> {
   buildBottomNavigation() {
     return BottomNavigationBar(
       iconSize: 30,
+      backgroundColor: Colors.black,
       selectedFontSize: 15,
       unselectedFontSize: 15,
-      unselectedItemColor: colorOfMainTheme,
-      backgroundColor:colorOfMainTheme, items: [
+      unselectedItemColor:colorOfMainTheme, items: [
       BottomNavigationBarItem(icon: Icon(Icons.home),label: 'AnaSayfa'),
       BottomNavigationBarItem(icon: Icon(Icons.notifications),label: 'Bildirimler'),
       BottomNavigationBarItem(icon: Icon(Icons.repeat),label: 'Takasla'),
