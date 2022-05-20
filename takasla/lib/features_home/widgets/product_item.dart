@@ -2,9 +2,10 @@
 
 
 import 'package:flutter/material.dart';
-import 'package:takasla/main/constants.dart';
+import 'package:takasla/features_home/widgets/product_info.dart';
 
-categoryItem(categoryName,imageUrl){
+
+productItem(productName,imageUrl,context){
   return Container(
     child: ElevatedButton(
       style: ButtonStyle(
@@ -12,7 +13,7 @@ categoryItem(categoryName,imageUrl){
         padding: MaterialStateProperty.all(EdgeInsets.all(0)),
         backgroundColor: MaterialStateProperty.all(Colors.white),
       ),
-      onPressed: (){print(categoryName);},
+      onPressed: (){Navigator.of(context).push(MaterialPageRoute(builder: (builder) => ProductInfoItem()));},
       child: Card(
         shadowColor: Colors.transparent,
         child: Center(
@@ -21,7 +22,7 @@ categoryItem(categoryName,imageUrl){
               children: [
                 Image.network(imageUrl,width: 80,),
                 SizedBox(height: 10,),
-                Text(categoryName),
+                Text(productName),
               ],
             )),
       ),

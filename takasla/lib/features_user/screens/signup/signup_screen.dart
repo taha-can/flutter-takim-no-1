@@ -78,48 +78,69 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   : CustomButton(
                       onPressed: () async {
                         var _checkData = checkData();
-                        if (_checkData) {
-                          bool passCheck = controllerPassword.text ==
-                                  controllerRePassword.text
-                              ? true
-                              : false;
-                          if (passCheck) {
-                            User savedUser = User(
-                                id: '1',
-                                name: controllerName.text,
-                                surname: controllerSurName.text,
-                                birtday: controllerBirthday.text,
-                                email: controllerEmail.text,
-                                password: controllerPassword.text);
-                            setState(() {
-                              isLoading = true;
-                            });
-                            var code = await sendEmailService(
-                                email: savedUser.email.toString(),
-                                user_name: savedUser.name.toString());
-                            setState(() {
-                              isLoading = false;
-                            });
-                            Navigator.of(context)
-                                .pushReplacement(MaterialPageRoute(
+
+                        if(check){
+                          if (_checkData) {
+                            bool passCheck = controllerPassword.text ==
+                                controllerRePassword.text
+                                ? true
+                                : false;
+                            if (passCheck) {
+                              var password = controllerPassword.text;
+                              if(passwordCheck(password)){
+                                User savedUser = User(
+                                    id: '1',
+                                    name: controllerName.text,
+                                    surname: controllerSurName.text,
+                                    birtday: controllerBirthday.text,
+                                    email: controllerEmail.text,
+                                    password: controllerPassword.text);
+                                setState(() {
+                                  isLoading = true;
+                                });
+                                var code = await sendEmailService(
+                                    email: savedUser.email.toString(),
+                                    user_name: savedUser.name.toString());
+                                setState(() {
+                                  isLoading = false;
+                                });
+                                Navigator.of(context)
+                                    .pushReplacement(MaterialPageRoute(
                                     builder: (context) => EmailConfirmation(
-                                          code: code,
-                                          user: savedUser,
-                                        )));
+                                      code: code,
+                                      user: savedUser,
+                                    )));
+                              }else{
+                                final snackBar = SnackBar(
+                                  content: const Text('Parolanız en az bir büyük harf, bir küçük harf, bir sayı ve bir özel karakter içermeli ve en az 8 karakter uzunluğunda olmalıdır.'),
+                                );
+                                ScaffoldMessenger.of(context)
+                                    .showSnackBar(snackBar);
+
+                              }
+                            } else {
+                              final snackBar = SnackBar(
+                                content: const Text('Parolalar Uyuşmuyor'),
+                              );
+                              ScaffoldMessenger.of(context)
+                                  .showSnackBar(snackBar);
+                            }
                           } else {
                             final snackBar = SnackBar(
-                              content: const Text('Parolalar Uyuşmuyor'),
+                              content:
+                              const Text('Lütfen tüm bilgileri doldurunuz.'),
                             );
-                            ScaffoldMessenger.of(context)
-                                .showSnackBar(snackBar);
+                            ScaffoldMessenger.of(context).showSnackBar(snackBar);
                           }
-                        } else {
+
+                        }else{
                           final snackBar = SnackBar(
                             content:
-                                const Text('Lütfen tüm bilgileri doldurunuz.'),
+                            const Text('KVKK metnini lütfen okuyunuz ve onaylayınız.'),
                           );
                           ScaffoldMessenger.of(context).showSnackBar(snackBar);
                         }
+
                       },
                       child: Text('Kayıt Ol'),
                       color: colorOfMainTheme,
@@ -336,4 +357,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
       },
     );
   }
+}
+
+bool passwordCheck(String password){
+  String  reg = r'^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!@#\$&*~]).{8,}$';
+  RegExp regExp = new RegExp(reg);
+  return regExp.hasMatch(password);
 }

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:takasla/features_home/widgets/categoryItem.dart';
+import 'package:takasla/features_home/widgets/product_item.dart';
 import 'package:takasla/main/constants.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -159,16 +159,16 @@ class _HomeScreenState extends State<HomeScreen> {
                 padding: EdgeInsets.all(8),
                 physics: NeverScrollableScrollPhysics(),
                 shrinkWrap: true,
-                crossAxisCount: 3,
+                crossAxisCount: MediaQuery.of(context).size.width>500 ? 8 : 3,
                 mainAxisSpacing: 5,
                 crossAxisSpacing: 5,
                 children: [
-                  categoryItem('Ürün',
-                      'https://cdn-icons-png.flaticon.com/512/3163/3163176.png'),
-                  categoryItem('Ürün',
-                      'https://cdn-icons-png.flaticon.com/512/3163/3163176.png'),
-                  categoryItem('Ürün',
-                      'https://cdn-icons-png.flaticon.com/512/3163/3163214.png'),
+                  productItem('Ürün',
+                      'https://cdn-icons-png.flaticon.com/512/3163/3163176.png',context),
+                  productItem('Ürün',
+                      'https://cdn-icons-png.flaticon.com/512/3163/3163176.png',context),
+                  productItem('Ürün',
+                      'https://cdn-icons-png.flaticon.com/512/3163/3163214.png',context),
                 ],
               ),
             ),

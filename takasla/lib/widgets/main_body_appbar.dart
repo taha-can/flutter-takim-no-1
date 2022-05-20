@@ -28,11 +28,7 @@ buildMainScreenAppBar(){
         padding: const EdgeInsets.all(5.0),
         child: Row(
           children: [
-            Icon(Icons.star_border,color: colorOfMainTheme,),
-            Icon(Icons.star_border,color: colorOfMainTheme,),
-            Icon(Icons.star_border,color: colorOfMainTheme,),
-            Icon(Icons.star_border,color: colorOfMainTheme,),
-            Icon(Icons.star_border,color: colorOfMainTheme,),
+
           ],
         ),
       ),
