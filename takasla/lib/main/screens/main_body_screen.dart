@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:takasla/features_notifications/screens/notifications_screen.dart';
 import 'package:takasla/features_offers/screens/offers_screen.dart';
 import 'package:takasla/features_trade/screens/trade_screen.dart';
+import 'package:takasla/features_trade/screens/trade_screen_welcome.dart';
 import 'package:takasla/features_user_profile/screens/profile_screen.dart';
 import 'package:takasla/main/constants.dart';
 
@@ -20,7 +21,7 @@ class MainBodyScreen extends StatefulWidget {
 }
 
 class _MainBodyScreenState extends State<MainBodyScreen> {
-  final List<Widget> ListOfScreenWidgets = [HomeScreen(),NotificationsScreen(),TradeScreen(),OffersScreen(),ProfileScreen(),ProfileScreen()];
+  final List<Widget> ListOfScreenWidgets = [HomeScreen(),NotificationsScreen(),WelcomeTradeScreen(),OffersScreen(),ProfileScreen(),ProfileScreen()];
   int _selectedIndex = 0;
 
 
