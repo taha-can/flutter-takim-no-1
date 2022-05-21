@@ -1,13 +1,16 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 import 'package:takasla/features_user/screens/forgetpassword/forget_password_screen.dart';
 import 'package:takasla/main/constants.dart';
+import 'package:takasla/main/database_connection/firebase.dart';
 import 'package:takasla/main/screens/main_body_screen.dart';
 import 'package:takasla/main/ui_components.dart';
 import '../../widgets/appbar.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
+
 
   @override
   State<LoginScreen> createState() => _LoginScreenState();
@@ -17,6 +20,12 @@ class _LoginScreenState extends State<LoginScreen> {
   TextEditingController controllerEmail = TextEditingController();
   TextEditingController controllerPassword = TextEditingController();
   bool isChecked = false;
+
+  Future<FirebaseApp> _initializeFirebase() async {
+    FirebaseApp firebaseApp = await Firebase.initializeApp();
+    return firebaseApp;
+  }
+
   void dispose() {
     controllerPassword.dispose();
     controllerEmail.dispose();
@@ -27,7 +36,21 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: buildAppBar(),
-      body: buildLoginForm(),
+      body: FutureBuilder(
+        future: _initializeFirebase(),
+        builder: (context, snapshot) {
+          if (snapshot.connectionState == ConnectionState.done) {
+            return Column(
+              children: [
+                buildLoginForm(),
+              ],
+            );
+          }
+          return Center(
+            child: CircularProgressIndicator(),
+          );
+        },
+      ),
     );
   }
 
@@ -61,11 +84,28 @@ class _LoginScreenState extends State<LoginScreen> {
       var cred = await Hive.openBox('localLogin');
       cred.put('email', controllerEmail.text);
       cred.put('password',controllerPassword.text);
-          Navigator.of(context).pushReplacement(
-          MaterialPageRoute(builder: (context) => MainBodyScreen()));
+      var response = await FirabaseService().LoginService(controllerEmail.text, controllerPassword.text).then((value)=>value.toString());
+      if (response == 'true') {
+        Navigator.of(context).pushReplacement(MaterialPageRoute(
+            builder: (context) => const MainBodyScreen()));
+      } else {
+        final snackBar = SnackBar(
+          content: Text(response),
+        );
+        ScaffoldMessenger.of(context).showSnackBar(snackBar);
+      }
+
     } else {
-      Navigator.of(context).pushReplacement(
-          MaterialPageRoute(builder: (context) => MainBodyScreen()));
+      var response = await FirabaseService().LoginService(controllerEmail.text, controllerPassword.text).then((value)=>value.toString());
+      if (response == 'true') {
+        Navigator.of(context).pushReplacement(MaterialPageRoute(
+            builder: (context) => const MainBodyScreen()));
+      } else {
+        final snackBar = SnackBar(
+          content: Text(response),
+        );
+        ScaffoldMessenger.of(context).showSnackBar(snackBar);
+      }
     }
   }
 

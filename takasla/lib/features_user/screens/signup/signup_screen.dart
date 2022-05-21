@@ -90,10 +90,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
                               if(passwordCheck(password)){
                                 User savedUser = User(
                                     id: '1',
-                                    name: controllerName.text,
-                                    surname: controllerSurName.text,
+                                    name: controllerName.text.toLowerCase(),
+                                    surname: controllerSurName.text.toLowerCase(),
                                     birtday: controllerBirthday.text,
-                                    email: controllerEmail.text,
+                                    email: controllerEmail.text.toLowerCase(),
                                     password: controllerPassword.text);
                                 setState(() {
                                   isLoading = true;
@@ -360,7 +360,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
 }
 
 bool passwordCheck(String password){
-  String  reg = r'^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!@#\$&*~]).{8,}$';
+  String  reg = r'^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[.?!@#\$&*~]).{8,}$';
   RegExp regExp = new RegExp(reg);
   return regExp.hasMatch(password);
 }
