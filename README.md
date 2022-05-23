@@ -95,12 +95,19 @@ Sprint 2
 - **Sprint Review**: 
  Sprint Review katılımcıları: Busenur Ertek, Şevval Özgirgin, Taha Yusuf Can, Elif Hilal Yaşar
  1. Sprint tahmin edilmesi gereken tahmini puan 133 ve sprint sonu tamamlanan puan 112 olarak hesaplanmıştır. Ürün için yapılması beklenen logo tasarımı maddesi bir sonraki sprinte aktarılmasına karar verilmiştir.
+  
  2. Mobil ekranlar için yapılan tasarımların yeniden gözden geçirilip dizayn edilmesine karar verilmiş ve bir sonraki sprintte iş bölümü yapılmasına karar verilmiştir.
+  
  3. Proje backlog planlama esnasında gündeme alınmayan "kullanıcı data yapılarının oluşturulması ve api testleri" maddesi backlog'a yansıtılmış ve sonraki sprintlerde gündeme alınmak üzere eklenmiştir.
+  
  4. İlk sprint sonrası ortaya çıkan ürün testleri ve email ile onay kodu gönderim servisi başarılı bir şekilde çalışmıştır.
+  
  5. Takas ürün ekleme ekranının ve kullanıcıyı karşılaştıran ana sayfanın detaylarında değişikliğe gidilerek yeniden tasarlanması karar verilmiştir.
+  
  6. Proje backlog maddelerinde eklenmeyen "ürün giden teklif ve gelen teklif ekranları" maddesi yeni madde olarak eklenmesine karar verilmiştir.
+ 
  7. Kayıt ekranında telefon bilgisinin eklenmesine ve KVKK onay metninin eklenmesine karar verildi.
+ 
  8. Proje tasarım toplantılarında gündeme gelmeyen Popup dizayn tasarımları gündeme geldi ve etkili popup tasarımları yapılması için çalışma yapılacağı belirtildi.
  ![Sprint Review](https://github.com/taha-can/flutter-takim-no-1/blob/main/sprint1/sprint1-son.PNG)
 
@@ -186,7 +193,7 @@ Done statüsüne çekilmiş ve ürünün kullanılır hale gelmesi konusunda spr
 
 -**Diğer Notlar**:
 - Ürün ekranları yeniden gözden geçirilmiş ve eksik erkan olmayacak şekilde iş akış senaryoları çizilmiştir.
-- ![takasla iş akış senaryosu] (https://github.com/taha-can/flutter-takim-no-1/blob/main/sprint2/takaslaa.drawio.png)
+![takasla iş akış senaryosu](https://github.com/taha-can/flutter-takim-no-1/blob/main/sprint2/takaslaa.drawio.png)
 - 
 
 - **Sprint board update**: Sprint board screenshotları:
