@@ -169,16 +169,16 @@ Done statüsüne çekilmiş ve ürünün kullanılır hale gelmesi konusunda spr
 - **Sprint Review**: 
  Sprint Review toplantısı sprintin son günü gerçekleştirilmiştir. 
  Toplantı katılımcıları: Busenur Ertek, Şevval Özgirgin, Taha Yusuf Can, Elif Hilal Yaşar
- 1.Güncellenen tasarım ve iş akışları ile birlikte, task içinde yer alan gereksinimler ve iş kurallarıda güncellenmiştir.
- 2.Takasla uygulaması için uygulama dili ve logosu hazırlanmıştır. Logo aynı zamanda uygulama içerisinde takasla sembolü olarak kullanılacaktır.
- 3.Her takım üyesi üzerine atanan işleri tamamlamış sadece uygulama içerisinde yer alması planlanan gif hazırlığı diğer sprintte ele alınmasına karar verilmiştir
- 4.Uygulama ana sayfası keşfet erkanı olarak güncellenmiştir.
- 5.Profil ekranı, profil düzenleme ekranı, ürün ekleme- ürün güncelleme ekranı, bildiirimler ekranı, gelen-giden teklifler ekranı, tasarımı tamamlanmıştır.
- 6.Uygulama içi servislerin yazımı başlandı - login ve signup service yazılmıştır.
- 7. Firebase kurulumu ile version ayarlaması yapıldı
- 8.Mail sistemi ve datalar  firestore kaydedildi
- 9.ürün ekranlarından belirtilen takaslama ekranı ürün seçim ekranı bildirimler ve teklifler erkanı yapıldı
- 10.Authentication testleri ile yeni kullanıcı profilleri oluşturulup kaydedildi
+ - Güncellenen tasarım ve iş akışları ile birlikte, task içinde yer alan gereksinimler ve iş kurallarıda güncellenmiştir.
+ - Takasla uygulaması için uygulama dili ve logosu hazırlanmıştır. Logo aynı zamanda uygulama içerisinde takasla sembolü olarak kullanılacaktır.
+ - Her takım üyesi üzerine atanan işleri tamamlamış sadece uygulama içerisinde yer alması planlanan gif hazırlığı diğer sprintte ele alınmasına karar verilmiştir
+ - Uygulama ana sayfası keşfet erkanı olarak güncellenmiştir.
+ - Profil ekranı, profil düzenleme ekranı, ürün ekleme- ürün güncelleme ekranı, bildiirimler ekranı, gelen-giden teklifler ekranı, tasarımı tamamlanmıştır.
+ - Uygulama içi servislerin yazımı başlandı - login ve signup service yazılmıştır.
+ - Firebase kurulumu ile version ayarlaması yapıldı
+ - Mail sistemi ve datalar  firestore kaydedildi
+ - ürün ekranlarından belirtilen takaslama ekranı ürün seçim ekranı bildirimler ve teklifler erkanı yapıldı
+ - Authentication testleri ile yeni kullanıcı profilleri oluşturulup kaydedildi
  Uygulama senaryosu yapılan ekranlar üzerinden test edildi.
  ![Sprint Review Toplantısı](https://github.com/taha-can/flutter-takim-no-1/blob/main/sprint2/2.sprint%20review.PNG)
  ![ürün detaylandıırlması](https://github.com/taha-can/flutter-takim-no-1/blob/main/sprint2/%C3%BCr%C3%BCn%20detayland%C4%B1r%C4%B1lmas%C4%B1.PNG)
