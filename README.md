@@ -145,13 +145,13 @@ Tasklar yeniden gözden geçirilmiş ve iş akış senaryoları drawio.da çizil
 - Daily Scrum toplantısı örneği jpeg veya word olarak Readme'de tarafımızdan paylaşılmaktadır: 
 
 - [Sprint 1 Daily Scrum Chats]
-[https://github.com/taha-can/flutter-takim-no-1/tree/main/sprint1]
+[https://github.com/taha-can/flutter-takim-no-1/tree/main/sprint2]
 ! [Daily örneği] (https://github.com/taha-can/flutter-takim-no-1/blob/main/sprint2/sprint%202%20daily.PNG)
 
 
 - **Sprint board update**: Sprint board screenshotları:
 
-![Backlog 1](https://github.com/taha-can/flutter-takim-no-1/blob/main/sprint1/proje%20backlog%20-1.sprint.PNG) 
+
 2. sprintte 19 madde gündeme alındı ve bu 19 maddenin 18'i tamamlanmış durumda uygulamaya yansıtılmıştır.
 ![Sprint 2 Backlog son ] (https://github.com/taha-can/flutter-takim-no-1/blob/main/sprint2/sprint%202%20backlog%20son.PNG)
 Done statüsüne çekilmiş ve ürünün kullanılır hale gelmesi konusunda sprint 2 de büyük ilerleme kaydedilmiştir.
