@@ -81,7 +81,7 @@ Sprint 2
 
 
 - **Ürün Durumu**: Ekran görüntüleri:
-  ![Screenshot 1](https://github.com/taha-can/flutter-takim-no-1/blob/main/sprint1/Simulator%20Screen%20Shot%20-%20iPhone%2012%20Pro%20-%202022-05-07%20at%2003.07.51.png)
+![Screenshot 1](https://github.com/taha-can/flutter-takim-no-1/blob/main/sprint1/Simulator%20Screen%20Shot%20-%20iPhone%2012%20Pro%20-%202022-05-07%20at%2003.07.51.png)
    ![Screenshot 2](https://github.com/taha-can/flutter-takim-no-1/blob/main/sprint1/Simulator%20Screen%20Shot%20-%20iPhone%2012%20Pro%20-%202022-05-07%20at%2003.07.53.png)
     ![Screenshot 3](https://github.com/taha-can/flutter-takim-no-1/blob/main/sprint1/Simulator%20Screen%20Shot%20-%20iPhone%2012%20Pro%20-%202022-05-07%20at%2003.07.55.png)
      ![Screenshot 4](https://github.com/taha-can/flutter-takim-no-1/blob/main/sprint1/Simulator%20Screen%20Shot%20-%20iPhone%2012%20Pro%20-%202022-05-07%20at%2003.07.57.png)
@@ -90,15 +90,24 @@ Sprint 2
        ![Screenshot 7](https://github.com/taha-can/flutter-takim-no-1/blob/main/sprint1/Simulator%20Screen%20Shot%20-%20iPhone%2013%20Pro%20-%202022-05-07%20at%2006.31.01.png)
   
 
+  
+
 - **Sprint Review**: 
  Sprint Review katılımcıları: Busenur Ertek, Şevval Özgirgin, Taha Yusuf Can, Elif Hilal Yaşar
  1. Sprint tahmin edilmesi gereken tahmini puan 133 ve sprint sonu tamamlanan puan 112 olarak hesaplanmıştır. Ürün için yapılması beklenen logo tasarımı maddesi bir sonraki sprinte aktarılmasına karar verilmiştir.
+  
  2. Mobil ekranlar için yapılan tasarımların yeniden gözden geçirilip dizayn edilmesine karar verilmiş ve bir sonraki sprintte iş bölümü yapılmasına karar verilmiştir.
+  
  3. Proje backlog planlama esnasında gündeme alınmayan "kullanıcı data yapılarının oluşturulması ve api testleri" maddesi backlog'a yansıtılmış ve sonraki sprintlerde gündeme alınmak üzere eklenmiştir.
+  
  4. İlk sprint sonrası ortaya çıkan ürün testleri ve email ile onay kodu gönderim servisi başarılı bir şekilde çalışmıştır.
+  
  5. Takas ürün ekleme ekranının ve kullanıcıyı karşılaştıran ana sayfanın detaylarında değişikliğe gidilerek yeniden tasarlanması karar verilmiştir.
+  
  6. Proje backlog maddelerinde eklenmeyen "ürün giden teklif ve gelen teklif ekranları" maddesi yeni madde olarak eklenmesine karar verilmiştir.
+ 
  7. Kayıt ekranında telefon bilgisinin eklenmesine ve KVKK onay metninin eklenmesine karar verildi.
+ 
  8. Proje tasarım toplantılarında gündeme gelmeyen Popup dizayn tasarımları gündeme geldi ve etkili popup tasarımları yapılması için çalışma yapılacağı belirtildi.
  ![Sprint Review](https://github.com/taha-can/flutter-takim-no-1/blob/main/sprint1/sprint1-son.PNG)
 
@@ -118,8 +127,8 @@ Sprint 2
 
 # Sprint 2
 
-- **Sprint Notları**: İkinci sprint başlangıç tarihinde sprinte başlanmış ve sprint planlama toplantısı gerçekleştirilmiştir.
-
+- **Sprint Notları**: İkinci sprint başlangıç tarihinde sprinte başlanmış ve sprint planlama toplantısı gerçekleştirilmiştir. 
+- ![Sprint planlama toplantısı] (https://github.com/taha-can/flutter-takim-no-1/blob/main/sprint2/sprint%20planlama.png)
 - **Sprint içinde tamamlanması tahmin edilen puan**: 170 Puan
 
 - **Puan tamamlama mantığı**: Toplamda proje boyunca tamamlanması gereken 440 puanlık backlog bulunmaktadır. İlk sprint 112 puan eritilmiş ve bu sprintte ilk sprintin altına düşmeden, mobil uygulamanın iskeletinin de oluşturulması tamamlandığı için büyüyen ivme gösterme amacı ile ikinci sprintte 170 puan eritmek planlandı.
@@ -128,41 +137,68 @@ Sprint 2
 
 Story'ler yapılacak işlere (task'lere) bölünmüştür. Miro Board'da gözüken kırmızı item'lar yapılacak işleri (task) gösterirken, mavi item'lar story'leri temsil etmektedir.
 Tasklar kendi içerisinde detaylandırılmış ve scrum metodolojisine uygun olarak ağırlıkları belirlenmiştir. 
+Tasklar yeniden gözden geçirilmiş ve iş akış senaryoları drawio.da çizilmiştir.
+![iş akış senaryoları](https://github.com/taha-can/flutter-takim-no-1/blob/main/sprint2/takasla_14.05.2022.drawio.png)
 
 - **Daily Scrum**: Daily Scrum toplantılarının zamansal sebeplerden, anlık ulaşım kolaylığı birden fazla ekran paylaşımı ve odalar ayrımı yapılabildiği için  Discord üzerinden yapılmasına karar verilmiştir. Discord üzerinden yapılan günlük toplantılarda ekip üyelerinin dün ne yaptım?, bugün ne yapacağım?, karşılaştığım sorunlar neler? soruları ile ilerleyerek daily notları alınıp proje tahtası olarak kabul edilen https://miro.com/app/board/uXjVO8Xk6Qg=/ de paylaşılmıştır.
 
 - Daily Scrum toplantısı örneği jpeg veya word olarak Readme'de tarafımızdan paylaşılmaktadır: 
 
 - [Sprint 1 Daily Scrum Chats]
-[https://github.com/taha-can/flutter-takim-no-1/tree/main/sprint1]
+[https://github.com/taha-can/flutter-takim-no-1/tree/main/sprint2]
+! [Daily örneği] (https://github.com/taha-can/flutter-takim-no-1/blob/main/sprint2/sprint%202%20daily.PNG)
 
 
 - **Sprint board update**: Sprint board screenshotları:
 
-![Backlog 1](https://github.com/taha-can/flutter-takim-no-1/blob/main/sprint1/proje%20backlog%20-1.sprint.PNG) 
 
+2. sprintte 19 madde gündeme alındı ve bu 19 maddenin 18'i tamamlanmış durumda uygulamaya yansıtılmıştır.
+![Sprint 2 Backlog son ] (https://github.com/taha-can/flutter-takim-no-1/blob/main/sprint2/sprint%202%20backlog%20son.PNG)
+Done statüsüne çekilmiş ve ürünün kullanılır hale gelmesi konusunda sprint 2 de büyük ilerleme kaydedilmiştir.
 
 - **Ürün Durumu**: Ekran görüntüleri:
-  ![Screenshot 1](https://github.com/taha-can/flutter-takim-no-1/blob/main/sprint1/Simulator%20Screen%20Shot%20-%20iPhone%2012%20Pro%20-%202022-05-07%20at%2003.07.51.png)
+ ![Screenshot 1](https://github.com/taha-can/flutter-takim-no-1/blob/main/sprint2/Simulator%20Screen%20Shot%20-%20iPhone%2012%20Pro%20-%202022-05-20%20at%2011.35.30.png)
+   ![Screenshot 2](https://github.com/taha-can/flutter-takim-no-1/blob/main/sprint2/Simulator%20Screen%20Shot%20-%20iPhone%2012%20Pro%20-%202022-05-20%20at%2011.35.33.png)
+    ![Screenshot 3](https://github.com/taha-can/flutter-takim-no-1/blob/main/sprint2/Simulator%20Screen%20Shot%20-%20iPhone%2012%20Pro%20-%202022-05-20%20at%2011.35.35.png)
+     ![Screenshot 4](https://github.com/taha-can/flutter-takim-no-1/blob/main/sprint2/Simulator%20Screen%20Shot%20-%20iPhone%2012%20Pro%20-%202022-05-20%20at%2011.35.37.png)
+      ![Screenshot 5](https://github.com/taha-can/flutter-takim-no-1/blob/main/sprint2/Simulator%20Screen%20Shot%20-%20iPhone%2012%20Pro%20-%202022-05-20%20at%2011.35.39.png)
+       ![Screenshot 6](https://github.com/taha-can/flutter-takim-no-1/blob/main/sprint2/Simulator%20Screen%20Shot%20-%20iPhone%2012%20Pro%20-%202022-05-20%20at%2011.37.18.png)
+       ![Screenshot 7](https://github.com/taha-can/flutter-takim-no-1/blob/main/sprint2/Simulator%20Screen%20Shot%20-%20iPhone%2013%20Pro%20-%202022-05-20%20at%2018.32.54.png)
  
 
 - **Sprint Review**: 
- Sprint Review katılımcıları: Busenur Ertek, Şevval Özgirgin, Taha Yusuf Can, Elif Hilal Yaşar
- 1. 
+ Sprint Review toplantısı sprintin son günü gerçekleştirilmiştir. 
+ Toplantı katılımcıları: Busenur Ertek, Şevval Özgirgin, Taha Yusuf Can, Elif Hilal Yaşar
+ - Güncellenen tasarım ve iş akışları ile birlikte, task içinde yer alan gereksinimler ve iş kurallarıda güncellenmiştir.
+ - Takasla uygulaması için uygulama dili ve logosu hazırlanmıştır. Logo aynı zamanda uygulama içerisinde takasla sembolü olarak kullanılacaktır.
+ - Her takım üyesi üzerine atanan işleri tamamlamış sadece uygulama içerisinde yer alması planlanan gif hazırlığı diğer sprintte ele alınmasına karar verilmiştir
+ - Uygulama ana sayfası keşfet erkanı olarak güncellenmiştir.
+ - Profil ekranı, profil düzenleme ekranı, ürün ekleme- ürün güncelleme ekranı, bildiirimler ekranı, gelen-giden teklifler ekranı, tasarımı tamamlanmıştır.
+ - Uygulama içi servislerin yazımı başlandı - login ve signup service yazılmıştır.
+ - Firebase kurulumu ile version ayarlaması yapıldı
+ - Mail sistemi ve datalar  firestore kaydedildi
+ - ürün ekranlarından belirtilen takaslama ekranı ürün seçim ekranı bildirimler ve teklifler erkanı yapıldı
+ - Authentication testleri ile yeni kullanıcı profilleri oluşturulup kaydedildi
+ Uygulama senaryosu yapılan ekranlar üzerinden test edildi.
+ ![Sprint Review Toplantısı](https://github.com/taha-can/flutter-takim-no-1/blob/main/sprint2/2.sprint%20review.PNG)
+ ![ürün detaylandıırlması](https://github.com/taha-can/flutter-takim-no-1/blob/main/sprint2/%C3%BCr%C3%BCn%20detayland%C4%B1r%C4%B1lmas%C4%B1.PNG)
 
 - **Sprint Retrospective:**
-  - 
+  - Sprint son günü retrospective toplantısı gerçekleştirildi.
+  - Ekip içi iş dağılımında sıkıntı olmadığı birlikte çalışmanın  kolay ve hızlı olduğuna kanaat getirildi.
+  - Scrum Master için her sabah yapılması gereken daily scrum için aksaklıklar, gerek çalışan gerek okulda olan ekip üyeleri olduğu için sabah saatlerinde gecikmeler yaşandığı ve bu durumun 3. sprintte tekrarlanmamasına özen gösterileceği belirtildi
+  - Dev ekibinin birlikte uyum içinde çalıştığı belirtildi.
+  - PO sprint 2 de yaşadığı toplantı zaman sıkıntılarının giderileceği belirtildi.
+  - ![Retrospective toplantısı](https://github.com/taha-can/flutter-takim-no-1/blob/main/sprint2/sprint2%20retrospective%20toplant%C4%B1s%C4%B1.PNG)
 
 -**Diğer Notlar**:
+- Ürün ekranları yeniden gözden geçirilmiş ve eksik erkan olmayacak şekilde iş akış senaryoları çizilmiştir.
+![takasla iş akış senaryosu](https://github.com/taha-can/flutter-takim-no-1/blob/main/sprint2/takaslaa.drawio.png)
 - 
-
-
-
-
 
 - **Sprint board update**: Sprint board screenshotları:
 
-![Backlog 1](https://github.com/taha-can/flutter-takim-no-1/blob/main/sprint1/proje%20backlog%20-1.sprint.PNG) 
+![sprint2 son hali](https://github.com/taha-can/flutter-takim-no-1/blob/main/sprint2/sprint2%20updatebacklog.PNG)
 
 
 # Sprint 3
