@@ -17,6 +17,8 @@ Future<void> main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+  final currentuser = Provider((_) => 'a');
+
   runApp(
     ProviderScope(
       child: const TakasApp(),

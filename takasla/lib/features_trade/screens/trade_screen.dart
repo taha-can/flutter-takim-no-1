@@ -29,7 +29,7 @@ class _TradeScreenState extends State<TradeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: buildMainScreenAppBar(),
+        appBar: buildMainScreenAppBar(context),
         body: Center(child: buildTradeScreen(context)));
   }
 

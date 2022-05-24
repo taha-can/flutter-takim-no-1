@@ -376,5 +376,53 @@ class _DateFormatter extends TextInputFormatter {
 }
 
 
+class CustomInputDisabled extends Input {
+  late TextEditingController controller;
+  late HexColor? color;
+  late String labelText;
+  late bool isPassword;
+  late int maxlength;
+
+  CustomInputDisabled(
+      {required this.color,
+        required this.controller,
+        required this.labelText,
+        required this.isPassword,
+        required this.maxlength});
+}
+class DisabledInput extends StatelessWidget {
+  const DisabledInput({Key? key}) : super(key: key);
+
+  get labelText => null;
+  get color => null;
+  get controller => null;
+  get isPassword => null;
+  get maxlength => 100;
+
+  @override
+  Widget build(BuildContext context) {
+    return TextField(
+      enabled: false,
+      maxLength: maxlength,
+      obscureText: isPassword,
+      decoration: InputDecoration(
+        counterText: "",
+        focusedBorder:
+        UnderlineInputBorder(borderSide: BorderSide(color: color)),
+        labelText: labelText,
+        labelStyle: TextStyle(
+          color: color,
+        ),
+      ),
+      style: TextStyle(
+        height: 0.9,
+        color: Colors.black87,
+      ),
+      controller: controller,
+    );
+  }
+}
+
+
 
 

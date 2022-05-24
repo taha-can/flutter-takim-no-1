@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../constants.dart';
 
@@ -9,12 +10,15 @@ class FirabaseService{
   FirebaseFirestore _firestore = FirebaseFirestore.instance;
 
   LoginService(email,password) async {
+
+    var result = [];
     try {
       var user = await _auth.signInWithEmailAndPassword(
           email: email,
           password: password
       );
-        return true;
+
+      return true;
     } on FirebaseAuthException catch (e) {
       if (e.code == 'user-not-found') {
         print('No user found for that email.');

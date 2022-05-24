@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:takasla/features_notifications/screens/notifications_screen.dart';
 import 'package:takasla/features_offers/screens/offers_screen.dart';
@@ -14,7 +15,7 @@ import '../../widgets/main_body_appbar.dart';
 
 
 class MainBodyScreen extends StatefulWidget {
-  const MainBodyScreen({Key? key}) : super(key: key);
+   MainBodyScreen({Key? key}) : super(key: key);
 
   @override
   State<MainBodyScreen> createState() => _MainBodyScreenState();
@@ -34,7 +35,7 @@ class _MainBodyScreenState extends State<MainBodyScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: buildMainScreenAppBar(),
+      appBar: buildMainScreenAppBar(context),
       body: ListOfScreenWidgets[_selectedIndex],
       bottomNavigationBar: buildBottomNavigation(),
     );
