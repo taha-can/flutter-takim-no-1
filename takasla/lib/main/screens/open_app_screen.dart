@@ -36,7 +36,7 @@ class OpenAppScreen extends StatelessWidget {
                               child: Container(
                                   child: CustomButton(
                                       onPressed: () {
-                                        Navigator.of(context).push(MaterialPageRoute(builder: (context) => const LoginScreen() ));
+                                        Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => const LoginScreen() ));
                                       },
                                       child: Text('Giriş Yap'),
                                       color: colorOfMainTheme,
@@ -47,7 +47,7 @@ class OpenAppScreen extends StatelessWidget {
                               child: Container(
                                   child: CustomButton(
                                       onPressed: () {
-                                        Navigator.of(context).push(MaterialPageRoute(builder: (context) => const SignUpScreen() ));
+                                        Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => const SignUpScreen() ));
 
                                       },
                                       child: Text('Kayıt Ol'),

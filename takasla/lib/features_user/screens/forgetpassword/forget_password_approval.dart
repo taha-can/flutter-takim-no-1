@@ -20,7 +20,7 @@ class _ForgetApprovalScreenState extends State<ForgetApprovalScreen> {
           child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text('Şifreniz Başarıyla Güncellendi.'),
+                Text('Şifre sıfırlama bağlantısı mailinize gönderilmiştir.'),
                 CustomButton(onPressed: (){
                   Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => const LoginScreen() ));
                 }, child: Text('Giriş Yap'), color: colorOfMainTheme, width: 100)

@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:hive/hive.dart';
 import 'package:takasla/main/screens/open_app_screen.dart';
 import 'package:takasla/main/ui_components.dart';
 
@@ -43,6 +44,9 @@ class _UserProfileInfoScreenState extends State<UserProfileInfoScreen> {
           ),
           Padding(padding: EdgeInsets.all(8),child: CustomButton(onPressed: () async {
             await FirebaseAuth.instance.signOut();
+            var cred = await Hive.openBox('localLogin');
+            cred.delete('email');
+            cred.delete('password');
             Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (builder)=>OpenAppScreen()));
           }, child: Text('Çıkış Yap'), color: rejectColor, width: 100),)
         ],

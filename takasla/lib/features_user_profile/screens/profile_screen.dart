@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:takasla/features_home/widgets/product_info.dart';
 import 'package:takasla/main/constants.dart';
 import 'package:takasla/main/ui_components.dart';
+
+import '../../features_home/screens/my_products_select_screen.dart';
+import '../widget/product_info_arrange.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({Key? key}) : super(key: key);
@@ -41,62 +45,15 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 crossAxisSpacing: 12,
                 mainAxisSpacing: 12,
                 children: [
+
                   CustomCard(
                       onPressed: () {
-                        print('Ürün');
-                      },
-                      text: 'Ürün',
-                      imageUrl:
-                          'https://images.pexels.com/photos/3731256/pexels-photo-3731256.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'),
-                  CustomCard(
-                      onPressed: () {
-                        print('Ürün');
+                        Navigator.of(context).push(MaterialPageRoute(builder: (builder)=> ProdcutInfoArrange()));
                       },
                       text: 'Ürün',
                       imageUrl:
                       'https://images.pexels.com/photos/3731256/pexels-photo-3731256.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'),
-                  CustomCard(
-                      onPressed: () {
-                        print('Ürün');
-                      },
-                      text: 'Ürün',
-                      imageUrl:
-                      'https://images.pexels.com/photos/3731256/pexels-photo-3731256.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'),
-                  CustomCard(
-                      onPressed: () {
-                        print('Ürün');
-                      },
-                      text: 'Ürün',
-                      imageUrl:
-                      'https://images.pexels.com/photos/3731256/pexels-photo-3731256.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'),
-                  CustomCard(
-                      onPressed: () {
-                        print('Ürün');
-                      },
-                      text: 'Ürün',
-                      imageUrl:
-                      'https://images.pexels.com/photos/3731256/pexels-photo-3731256.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'),
-                  CustomCard(
-                      onPressed: () {
-                        print('Ürün');
-                      },
-                      text: 'Ürün',
-                      imageUrl:
-                      'https://images.pexels.com/photos/3731256/pexels-photo-3731256.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'),
-                  CustomCard(
-                      onPressed: () {
-                        print('Ürün');
-                      },
-                      text: 'Ürün',
-                      imageUrl:
-                      'https://images.pexels.com/photos/3731256/pexels-photo-3731256.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'),
-                  CustomCard(
-                      onPressed: () {
-                        print('Ürün');
-                      },
-                      text: 'Ürün',
-                      imageUrl:
-                      'https://images.pexels.com/photos/3731256/pexels-photo-3731256.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'),
+
                 ],
               ),
             ),

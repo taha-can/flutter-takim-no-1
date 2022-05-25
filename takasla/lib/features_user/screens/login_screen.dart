@@ -71,16 +71,16 @@ class _LoginScreenState extends State<LoginScreen> {
 
   sendLoginForm() async {
     if (isChecked) {
-      var cred = await Hive.openBox('localLogin');
-      cred.put('email', controllerEmail.text);
-      cred.put('password',controllerPassword.text);
       var response = await FirabaseService().LoginService(controllerEmail.text, controllerPassword.text).then((value)=>value.toString());
       if (response == 'true') {
+        var cred = await Hive.openBox('localLogin');
+        cred.put('email', controllerEmail.text);
+        cred.put('password',controllerPassword.text);
         Navigator.of(context).pushReplacement(MaterialPageRoute(
             builder: (context) =>  MainBodyScreen()));
       } else {
         final snackBar = SnackBar(
-          content: Text(response),
+          content: Text('Kullanıcı Adı veye Parola Hatalı'),
         );
         ScaffoldMessenger.of(context).showSnackBar(snackBar);
       }
@@ -92,7 +92,7 @@ class _LoginScreenState extends State<LoginScreen> {
             builder: (context) =>  MainBodyScreen()));
       } else {
         final snackBar = SnackBar(
-          content: Text(response),
+          content: Text('Kullanıcı Adı veye Parola Hatalı'),
         );
         ScaffoldMessenger.of(context).showSnackBar(snackBar);
       }

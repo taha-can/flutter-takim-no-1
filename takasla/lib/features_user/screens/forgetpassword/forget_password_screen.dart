@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:takasla/features_user/screens/forgetpassword/forget_password_email_confirmation.dart';
+import 'package:takasla/features_user/service.dart';
 
 import '../../../main/constants.dart';
 import '../../../main/ui_components.dart';
@@ -35,8 +36,9 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
             ],),
             buildForgetPasswordEmailField(),
             CustomButton(
-                onPressed: () {
-                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => const ForgetEmailConfirmscreen() ));
+                onPressed: () async {
+                  var securecode = await sendEmailPasswordresetService(email: controllerEmail.text);
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context) =>  ForgetEmailConfirmscreen( securecode: securecode,email: controllerEmail.text,) ));
                 },
                 child: Container(child: Text('Şifremi Yenile',)),
                 color: colorOfMainTheme,

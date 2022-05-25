@@ -22,10 +22,10 @@ class FirabaseService{
     } on FirebaseAuthException catch (e) {
       if (e.code == 'user-not-found') {
         print('No user found for that email.');
-        return 'Kullanıcı Bulunaadı';
+        return false;
       } else if (e.code == 'wrong-password') {
         print('Wrong password provided for that user.');
-        return 'Kullanıcı parolası veya email hatalı';
+        return false;
       }
     }
   }
@@ -55,6 +55,20 @@ Future SignUpService(name,surname,birtday,email,password) async {
     } catch (e) {
       return false;
     }
+  }
+
+
+
+  ResetPassword(email) async {
+
+    try{
+      await  _auth.sendPasswordResetEmail(email: email);
+      return true;
+    }on FirebaseAuthException catch (e) {
+      return false;
+    }
+
+
   }
 }
 
