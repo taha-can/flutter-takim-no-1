@@ -1,12 +1,19 @@
-import 'package:flutter/material.dart';
+
+
+
+
+
+
+
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class UserInfo extends ConsumerWidget {
-  const UserInfo({Key? key}): super(key: key);
 
-  @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    final currentuser = ref.read(currentuser);
-    return Text(currentuser);
-  }
+currentUser(){
+    var currentuid = FirebaseAuth.instance.currentUser!.uid;
+    FirebaseFirestore.instance.collection('users').doc(currentuid).get().then((value){
+      return value.data()!['name'];
+
+    });
 }

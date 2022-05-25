@@ -19,6 +19,12 @@ class _MyProductScreenState extends State<MyProductScreen> {
   DateTime? _dateTime;
   dynamic dodString = "";
   late String dodToSend;
+  Map<String, Image> ListOfDelivered = {
+    'Ankara Teslimat Merkezi': Image.asset('assets/images/ankara.png'),
+    'İstanbul Teslimat Noktası1':  Image.asset('assets/images/istanbul1.png'),
+    'İstanbul Teslimat Noktası2':  Image.asset('assets/images/istanbul2.png'),
+    'İstanbul Teslimat Noktası3':  Image.asset('assets/images/istanbul3.png'),
+  };
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -60,7 +66,7 @@ class _MyProductScreenState extends State<MyProductScreen> {
                       shrinkWrap: true,
                       scrollDirection: Axis.vertical,
                       padding: EdgeInsets.all(8),
-                      childAspectRatio: 0.55,
+                      childAspectRatio: 0.60,
                       crossAxisCount: 2,
                       crossAxisSpacing: 12,
                       mainAxisSpacing: 12,
@@ -155,6 +161,9 @@ class _MyProductScreenState extends State<MyProductScreen> {
                           );
                         }).toList(),
                       ),
+                      Container(
+                        child: ListOfDelivered[dropdownValue],
+                      ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
@@ -165,11 +174,17 @@ class _MyProductScreenState extends State<MyProductScreen> {
                               child: TextField(
                                 style: TextStyle(fontSize: 14),
                                 decoration: InputDecoration(
-                                  focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: colorOfMainTheme)) ,
+                                  focusedBorder: OutlineInputBorder(
+                                      borderSide:
+                                          BorderSide(color: colorOfMainTheme)),
                                   hintStyle: TextStyle(fontSize: 12),
-                                  border:  OutlineInputBorder(borderSide: BorderSide(color: colorOfMainTheme)),
-                                  icon:  Icon(Icons
-                                      .calendar_today,color: colorOfMainTheme,), //icon of text field
+                                  border: OutlineInputBorder(
+                                      borderSide:
+                                          BorderSide(color: colorOfMainTheme)),
+                                  icon: Icon(
+                                    Icons.calendar_today,
+                                    color: colorOfMainTheme,
+                                  ), //icon of text field
                                   hintText: dodString == ""
                                       ? "Teslimat Tarihi"
                                       : dodString.toString().substring(0, 10),
@@ -183,16 +198,17 @@ class _MyProductScreenState extends State<MyProductScreen> {
                                             return Theme(
                                               data: Theme.of(context).copyWith(
                                                 colorScheme: ColorScheme.light(
-                                                  primary: colorOfMainTheme,
-                                                  onPrimary: Colors.white, // header text color
-                                                  onSurface:  colorOfMainTheme
-                                                ),
+                                                    primary: colorOfMainTheme,
+                                                    onPrimary: Colors
+                                                        .white, // header text color
+                                                    onSurface:
+                                                        colorOfMainTheme),
                                                 textButtonTheme:
                                                     TextButtonThemeData(
                                                   style: TextButton.styleFrom(
-                                                    primary: colorOfMainTheme
-                                                    // button text color
-                                                  ),
+                                                      primary: colorOfMainTheme
+                                                      // button text color
+                                                      ),
                                                 ),
                                               ),
                                               child: child!,

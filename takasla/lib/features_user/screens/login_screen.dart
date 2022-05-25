@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -73,6 +74,7 @@ class _LoginScreenState extends State<LoginScreen> {
     if (isChecked) {
       var response = await FirabaseService().LoginService(controllerEmail.text, controllerPassword.text).then((value)=>value.toString());
       if (response == 'true') {
+
         var cred = await Hive.openBox('localLogin');
         cred.put('email', controllerEmail.text);
         cred.put('password',controllerPassword.text);

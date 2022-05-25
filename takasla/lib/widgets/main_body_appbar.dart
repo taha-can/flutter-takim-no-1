@@ -3,13 +3,12 @@
 
 
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:takasla/features_user_profile/screens/user_profile_info.dart';
 import 'package:takasla/main/constants.dart';
+import 'package:takasla/main/database_connection/firebase.dart';
 
 
 buildMainScreenAppBar(context){
-
   return AppBar(
     elevation: 0,
     backgroundColor: Colors.transparent,
@@ -19,7 +18,7 @@ buildMainScreenAppBar(context){
         Row(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            Text('Merhaba Aylin',style: TextStyle(color: colorOfMainTheme),),
+            Text('',style: TextStyle(color: colorOfMainTheme),),
 
           ],
         ),

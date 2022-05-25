@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'package:crypto/crypto.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:takasla/main/provider_user.dart';
 
 final colorOfMainTheme = HexColor('#be49fc');
 final colorOfSecondThem = HexColor('#9b959c');
@@ -14,3 +15,5 @@ final lorem = '''Yaygın inancın tersine, Lorem Ipsum rastgele sözcüklerden o
 String generateMd5(String input) {
   return md5.convert(utf8.encode(input)).toString();
 }
+
+
