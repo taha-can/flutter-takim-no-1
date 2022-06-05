@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:hive/hive.dart';
 import 'package:takasla/main/constants.dart';
 
 //DefaultButtonType
@@ -26,9 +27,11 @@ class Button extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
+
       onPressed: onPressed,
       child: child,
       style: ButtonStyle(
+
         maximumSize: MaterialStateProperty.all(Size(width, 400)),
         backgroundColor: MaterialStateProperty.all(color!),
       ),
@@ -156,7 +159,7 @@ class CardType extends StatelessWidget {
           color: Colors.white,
           borderRadius: BorderRadius.circular(20),
         ),
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(5.0),
         child: TextButton(
             style: ButtonStyle(
                 overlayColor: MaterialStateProperty.all(Colors.black26),
@@ -167,18 +170,21 @@ class CardType extends StatelessWidget {
               children: [
                 Container(
                     child: ClipRRect(
-                  borderRadius: BorderRadius.circular(20),
+                  borderRadius: BorderRadius.circular(10),
                   child: Image.network(
                     imageUrl!,
-                    width: 200,
+                    height: 100,
                   ),
                 )),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text(
-                      text!,
-                      style: TextStyle(fontSize: 20, color: colorOfMainTheme),
+                    Container(
+                      padding: EdgeInsets.symmetric(vertical: 10),
+                      child: Text(
+                        text!,
+                        style: TextStyle(fontSize: 14, color: colorOfMainTheme),
+                      ),
                     ),
                     SizedBox(
                       width: 10,

@@ -3,6 +3,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:takasla/features_home/widgets/product_info.dart';
+import 'package:takasla/main/constants.dart';
 
 
 productItem(productName,imageUrl,context){
@@ -20,9 +21,9 @@ productItem(productName,imageUrl,context){
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Image.network(imageUrl,width: 80,),
+                Image.network(imageUrl,width: 150,),
                 SizedBox(height: 10,),
-                Text(productName),
+                Text(productName,style: TextStyle(fontSize: 13,color: colorOfMainTheme),),
               ],
             )),
       ),

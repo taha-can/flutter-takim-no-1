@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:takasla/features_user/screens/login_screen.dart';
 import 'package:takasla/features_user/screens/signup/signup_screen.dart';
+import 'package:takasla/main/database_connection/firebase.dart';
 import 'package:takasla/main/ui_components.dart';
 
 import '../../widgets/appbar.dart';
 import '../constants.dart';
+import 'main_body_screen.dart';
 
 
 class OpenAppScreen extends StatelessWidget {
@@ -72,7 +74,13 @@ class OpenAppScreen extends StatelessWidget {
             padding: const EdgeInsets.all(10.0),
             child: TextButton(
               child: Text('Misafir Olarak Devam Et'),
-              onPressed: (){},
+              onPressed: () async {
+                var response = await FirabaseService().LoginService('theteamflutterno1@gmail.com', '12345tG.?').then((value)=>value.toString());
+                if (response == 'true') {
+                  Navigator.of(context).pushReplacement(MaterialPageRoute(
+                      builder: (context) =>  MainBodyScreen()));
+                }
+              },
             ),
           ),
         ),

@@ -34,14 +34,14 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
                     Expanded(
                         child: TextButton(
                           onPressed: () {
-                            Navigator.of(context).push(MaterialPageRoute(builder: (context)=> FullSizeNotification()));
+                            Navigator.of(context).push(MaterialPageRoute(builder: (context)=> FullSizeNotification(info: 'Ürününüz Ekibimiz Tarafından Onaylandı',)));
                           },
                           child: Align(
                               alignment: Alignment.centerLeft,child: Row(
                                 children: [
                                   Icon(Icons.add_alert,color: colorOfMainTheme,),
                                   SizedBox(width: 10,),
-                                  Text('Bildirim1',style: TextStyle(color: colorOfMainTheme),),
+                                  Text('Ürününüz Onaylandı',style: TextStyle(color: colorOfMainTheme),),
                                 ],
                               )),
                           style: ButtonStyle(

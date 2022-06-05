@@ -1,6 +1,8 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:takasla/features_home/widgets/product_info.dart';
 import 'package:takasla/main/constants.dart';
+import 'package:takasla/main/database_connection/firebase.dart';
 import 'package:takasla/main/ui_components.dart';
 
 import '../../features_home/screens/my_products_select_screen.dart';
@@ -15,46 +17,59 @@ class ProfileScreen extends StatefulWidget {
 
 class _ProfileScreenState extends State<ProfileScreen> {
   TextEditingController searchProfile = TextEditingController();
+  var current_user = FirebaseAuth.instance.currentUser;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
         child: ListView(
           children: [
-                  Row(
-                    children: [
-                      Icon(Icons.search,color: colorOfMainTheme,),
-                      Flexible(
-                        child: Container(
-                          padding: const EdgeInsets.all(10.0),
-                          child: CustomSearchInput(color: colorOfMainTheme, controller: searchProfile, hintText: 'Arama'),
-                        ),
-                      ),
-                      Icon(Icons.filter_alt_rounded,color: colorOfMainTheme,)
-                    ],
+            Row(
+              children: [
+                Icon(
+                  Icons.search,
+                  color: colorOfMainTheme,
+                ),
+                Flexible(
+                  child: Container(
+                    padding: const EdgeInsets.all(10.0),
+                    child: CustomSearchInput(
+                        color: colorOfMainTheme,
+                        controller: searchProfile,
+                        hintText: 'Arama'),
                   ),
-
+                ),
+              ],
+            ),
             Expanded(
-              child: GridView.count(
-                physics: NeverScrollableScrollPhysics(),
-                shrinkWrap: true,
-                scrollDirection: Axis.vertical,
-                padding: EdgeInsets.all(8),
-                childAspectRatio: 0.55,
-                crossAxisCount: 2,
-                crossAxisSpacing: 12,
-                mainAxisSpacing: 12,
-                children: [
-
-                  CustomCard(
-                      onPressed: () {
-                        Navigator.of(context).push(MaterialPageRoute(builder: (builder)=> ProdcutInfoArrange()));
-                      },
-                      text: 'Ürün',
-                      imageUrl:
-                      'https://images.pexels.com/photos/3731256/pexels-photo-3731256.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'),
-
-                ],
+              child: FutureBuilder(
+                future: FirabaseService().GetProductsByUid(),
+                builder: (context, AsyncSnapshot<List> snapshot) {
+                  if (snapshot.hasData) {
+                    return current_user!.email == 'theteamflutterno1@gmail.com' ? Center(child: Text('Benim Ürünlerim'),):GridView.count(
+                      physics: NeverScrollableScrollPhysics(),
+                      shrinkWrap: true,
+                      scrollDirection: Axis.vertical,
+                      padding: EdgeInsets.all(8),
+                      childAspectRatio: 0.8,
+                      crossAxisCount: 2,
+                      crossAxisSpacing: 12,
+                      mainAxisSpacing: 12,
+                      children: List.generate(
+                          snapshot.data!.length,
+                          (index) => CustomCard(
+                              onPressed: () {
+                                Navigator.of(context).push(MaterialPageRoute(
+                                    builder: (builder) =>
+                                        ProdcutInfoArrange()));
+                              },
+                              text: snapshot.data![index]['name'].toString().toUpperCase(),
+                              imageUrl: snapshot.data![index]['photoproduct'] )),
+                    );
+                  } else {
+                    return Center(child: CircularProgressIndicator(color: colorOfMainTheme,));
+                  }
+                },
               ),
             ),
           ],
