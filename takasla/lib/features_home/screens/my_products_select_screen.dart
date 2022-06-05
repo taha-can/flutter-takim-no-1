@@ -1,14 +1,17 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:takasla/main/constants.dart';
 
+import '../../features_trade/screens/trade_deliver_screen.dart';
+import '../../main/database_connection/firebase.dart';
 import '../../main/ui_components.dart';
-import 'dart:io';
-import 'dart:convert';
+
 
 import 'package:intl/intl.dart';
 
 class MyProductScreen extends StatefulWidget {
-  const MyProductScreen({Key? key}) : super(key: key);
+  dynamic productForTrade;
+   MyProductScreen({Key? key, required this.productForTrade}) : super(key: key);
 
   @override
   State<MyProductScreen> createState() => _MyProductScreenState();
@@ -19,6 +22,8 @@ class _MyProductScreenState extends State<MyProductScreen> {
   DateTime? _dateTime;
   dynamic dodString = "";
   late String dodToSend;
+  var selectedProductToTrade;
+  var bgColorSelected;
   Map<String, Image> ListOfDelivered = {
     'Ankara Teslimat Merkezi': Image.asset('assets/images/ankara.png'),
     'İstanbul Teslimat Noktası1':  Image.asset('assets/images/istanbul1.png'),
@@ -27,6 +32,7 @@ class _MyProductScreenState extends State<MyProductScreen> {
   };
   @override
   Widget build(BuildContext context) {
+    var current_user = FirebaseAuth.instance.currentUser;
     return Scaffold(
       body: Container(
         padding: EdgeInsets.all(10),
@@ -48,11 +54,22 @@ class _MyProductScreenState extends State<MyProductScreen> {
                             )),
                         Container(
                           padding: EdgeInsets.all(8),
-                          child: Text(
-                            'Kullanıcı Adı',
-                            style: TextStyle(
-                                color: colorOfMainTheme, fontSize: 20),
-                          ),
+                          child: FutureBuilder(
+                              future: FirabaseService().GetNameByUid(current_user!.uid)
+                              ,builder: (context,AsyncSnapshot snapshot){
+                            if (snapshot.hasData){
+                              return Text(
+                                'Takas Kullanıcısı ${snapshot.data!.toString().toUpperCase()}',
+                                style: TextStyle(color: colorOfMainTheme, fontSize: 20),
+                              );
+                            }else {
+                              return CircularProgressIndicator(color: colorOfMainTheme,);
+                            }
+
+                          })
+
+
+
                         )
                       ],
                     )
@@ -61,74 +78,37 @@ class _MyProductScreenState extends State<MyProductScreen> {
                 Expanded(
                     child: ListView(
                   children: [
-                    GridView.count(
-                      physics: NeverScrollableScrollPhysics(),
-                      shrinkWrap: true,
-                      scrollDirection: Axis.vertical,
-                      padding: EdgeInsets.all(8),
-                      childAspectRatio: 0.60,
-                      crossAxisCount: 2,
-                      crossAxisSpacing: 12,
-                      mainAxisSpacing: 12,
-                      children: [
-                        CustomCard(
-                            onPressed: () {
-                              print('Ürün');
-                            },
-                            text: 'Ürün',
-                            imageUrl:
-                                'https://images.pexels.com/photos/3731256/pexels-photo-3731256.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'),
-                        CustomCard(
-                            onPressed: () {
-                              print('Ürün');
-                            },
-                            text: 'Ürün',
-                            imageUrl:
-                                'https://images.pexels.com/photos/3731256/pexels-photo-3731256.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'),
-                        CustomCard(
-                            onPressed: () {
-                              print('Ürün');
-                            },
-                            text: 'Ürün',
-                            imageUrl:
-                                'https://images.pexels.com/photos/3731256/pexels-photo-3731256.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'),
-                        CustomCard(
-                            onPressed: () {
-                              print('Ürün');
-                            },
-                            text: 'Ürün',
-                            imageUrl:
-                                'https://images.pexels.com/photos/3731256/pexels-photo-3731256.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'),
-                        CustomCard(
-                            onPressed: () {
-                              print('Ürün');
-                            },
-                            text: 'Ürün',
-                            imageUrl:
-                                'https://images.pexels.com/photos/3731256/pexels-photo-3731256.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'),
-                        CustomCard(
-                            onPressed: () {
-                              print('Ürün');
-                            },
-                            text: 'Ürün',
-                            imageUrl:
-                                'https://images.pexels.com/photos/3731256/pexels-photo-3731256.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'),
-                        CustomCard(
-                            onPressed: () {
-                              print('Ürün');
-                            },
-                            text: 'Ürün',
-                            imageUrl:
-                                'https://images.pexels.com/photos/3731256/pexels-photo-3731256.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'),
-                        CustomCard(
-                            onPressed: () {
-                              print('Ürün');
-                            },
-                            text: 'Ürün',
-                            imageUrl:
-                                'https://images.pexels.com/photos/3731256/pexels-photo-3731256.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'),
-                      ],
-                    )
+                    FutureBuilder(
+                      future: FirabaseService().GetProductsByUid(),
+                      builder: (context, AsyncSnapshot<List> snapshot) {
+                        if (snapshot.hasData) {
+                          return current_user.email == 'theteamflutterno1@gmail.com' ? Center(child: Text('Benim Ürünlerim'),):GridView.count(
+                            physics: NeverScrollableScrollPhysics(),
+                            shrinkWrap: true,
+                            scrollDirection: Axis.vertical,
+                            padding: EdgeInsets.all(8),
+                            childAspectRatio: 0.8,
+                            crossAxisCount: 2,
+                            crossAxisSpacing: 12,
+                            mainAxisSpacing: 12,
+                            children: List.generate(
+                                snapshot.data!.length,
+                                    (index) => CustomCard(
+                                      bgcolor: (index == bgColorSelected) ? 'var' : null,
+                                    onPressed: () {
+                                          setState((){
+                                            selectedProductToTrade = snapshot.data![index];
+                                            bgColorSelected =  index;
+                                          });
+                                    },
+                                    text: snapshot.data![index]['name'].toString().toUpperCase(),
+                                    imageUrl: snapshot.data![index]['photoproduct'] )),
+                          );
+                        } else {
+                          return Center(child: CircularProgressIndicator(color: colorOfMainTheme,));
+                        }
+                      },
+                    ),
                   ],
                 )),
                 Container(
@@ -230,7 +210,17 @@ class _MyProductScreenState extends State<MyProductScreen> {
                                 },
                               )),
                           CustomButton(
-                              onPressed: () {},
+                              onPressed: ()  async {
+                                final snackBar = SnackBar(
+                                  content: Text('Bir Hata Oluştu'),
+                                );
+                                var response = await FirabaseService().TradeAdd( widget.productForTrade['name'],selectedProductToTrade['name'], dropdownValue, dodString, widget.productForTrade['user_id'],selectedProductToTrade['user_id'], false, true,  widget.productForTrade['price'],selectedProductToTrade['price']).then((value)=>value.toString());
+                                print(response);
+                                response == 'true' ? Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=> TradeDelivery(productChange: selectedProductToTrade,productForTrade: widget.productForTrade,dodToSend:dodString,deliverycenter:dropdownValue)))
+                                :ScaffoldMessenger.of(context).showSnackBar(snackBar);
+
+
+                              },
                               child: Text('Teklif Ver'),
                               color: colorOfMainTheme,
                               width: 100)

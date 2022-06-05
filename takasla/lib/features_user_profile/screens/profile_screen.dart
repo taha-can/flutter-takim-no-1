@@ -1,11 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:takasla/features_home/widgets/product_info.dart';
 import 'package:takasla/main/constants.dart';
 import 'package:takasla/main/database_connection/firebase.dart';
 import 'package:takasla/main/ui_components.dart';
-
-import '../../features_home/screens/my_products_select_screen.dart';
 import '../widget/product_info_arrange.dart';
 
 class ProfileScreen extends StatefulWidget {

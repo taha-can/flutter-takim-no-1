@@ -6,7 +6,7 @@ import 'package:takasla/features_home/widgets/product_info.dart';
 import 'package:takasla/main/constants.dart';
 
 
-productItem(productName,imageUrl,context){
+productItem(product,productName,imageUrl,context){
   return Container(
     child: ElevatedButton(
       style: ButtonStyle(
@@ -14,7 +14,7 @@ productItem(productName,imageUrl,context){
         padding: MaterialStateProperty.all(EdgeInsets.all(0)),
         backgroundColor: MaterialStateProperty.all(Colors.white),
       ),
-      onPressed: (){Navigator.of(context).push(MaterialPageRoute(builder: (builder) => ProductInfoItem()));},
+      onPressed: (){Navigator.of(context).push(MaterialPageRoute(builder: (builder) => ProductInfoItem(product: product,)));},
       child: Card(
         shadowColor: Colors.transparent,
         child: Center(

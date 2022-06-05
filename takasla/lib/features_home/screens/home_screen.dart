@@ -159,7 +159,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   childAspectRatio: 0.8,
                   children: List.generate(
                       snapshot.data!.length,
-                          (index) => productItem(
+                          (index) => productItem(snapshot.data![index],
                               snapshot.data![index]['name'].toString().toUpperCase(),
                           snapshot.data![index]['photoproduct'],context )),
                 );

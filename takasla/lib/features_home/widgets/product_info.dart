@@ -1,17 +1,21 @@
 
 
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:takasla/features_home/screens/my_products_select_screen.dart';
+import 'package:takasla/main/database_connection/firebase.dart';
 
 import 'package:takasla/main/ui_components.dart';
 
 import '../../main/constants.dart';
 
 class ProductInfoItem extends StatelessWidget {
-  const ProductInfoItem({Key? key}) : super(key: key);
+  dynamic product;
+   ProductInfoItem({Key? key,required this.product}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    var current_user = FirebaseAuth.instance.currentUser;
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
@@ -29,19 +33,19 @@ class ProductInfoItem extends StatelessWidget {
         padding: EdgeInsets.all(8),
         child: ListView(
           children: [
-            buildTakasUsername(),
-            buildProductPhotos(context),
-            buildProductName(),
-            buildProductDescription(),
-            buildCategoriesSelected(),
-            buildProductButton(context),
+            buildTakasUsername(product),
+            buildProductPhotos(context,product),
+            buildProductName(product),
+            buildProductDescription(product),
+            buildCategoriesSelected(product),
+            buildProductButton(context,current_user),
           ],
         ),
       ),
     );
   }
 
-  Container buildCategoriesSelected() {
+  Container buildCategoriesSelected(product) {
     return Container(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -63,27 +67,27 @@ class ProductInfoItem extends StatelessWidget {
                   children: [
                     Container(
                       alignment: Alignment.center,
-                      child: Text('Kategori'),
+                      child: Text(product['wanted_category'][0]),
                     ),
                     Container(
                       alignment: Alignment.center,
-                      child: Text('Kategori'),
+                      child: Text(product['wanted_category'][1]),
                     ),
                     Container(
                       alignment: Alignment.center,
-                      child: Text('Kategori'),
+                      child: Text(product['wanted_category'][2]),
                     ),
                     Container(
                       alignment: Alignment.center,
-                      child: Text('Kategori'),
+                      child: Text(product['wanted_category'][3]),
                     ),
                     Container(
                       alignment: Alignment.center,
-                      child: Text('Kategori'),
+                      child: Text(product['wanted_category'][4]),
                     ),
                     Container(
                       alignment: Alignment.center,
-                      child: Text('Kategori'),
+                      child: Text(product['wanted_category'][5]),
                     ),
 
                   ],
@@ -93,7 +97,7 @@ class ProductInfoItem extends StatelessWidget {
           ));
   }
 
-  Container buildProductButton(context) {
+  Container buildProductButton(context,current_user) {
     return Container(
       padding: EdgeInsets.all(8),
       child: Row(
@@ -104,7 +108,7 @@ class ProductInfoItem extends StatelessWidget {
             height: 50,
             padding: EdgeInsets.all(10),
             child: Text(
-              '1000 ₺',
+              '${product['price']} ₺',
               style: TextStyle(color: Colors.white, fontSize: 18),
             ),
             decoration: BoxDecoration(
@@ -121,9 +125,9 @@ class ProductInfoItem extends StatelessWidget {
           Container(
               width: 200,
               height: 50,
-              child: CustomButton(
+              child: (current_user.uid.toString() == product['user_id'].toString() || current_user.email == 'theteamflutterno1@gmail.com') ? Container(): CustomButton(
                 onPressed: () {
-                  Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (builder)=>MyProductScreen()));
+                  Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (builder)=>MyProductScreen(productForTrade: product,)));
                 },
                 child: Text(
                   'Takasla',
@@ -137,15 +141,28 @@ class ProductInfoItem extends StatelessWidget {
     );
   }
 
-  Container buildTakasUsername() => Container(
+  Container buildTakasUsername(produc) => Container(
       padding: EdgeInsets.all(10),
-      child: Text(
-        'Takas Kullanıcısı Adı',
-        style: TextStyle(color: colorOfMainTheme, fontSize: 20),
-      ));
+      child: FutureBuilder(
+      future: FirabaseService().GetNameByUid(product['user_id'])
+      ,builder: (context,AsyncSnapshot snapshot){
+        if (snapshot.hasData){
+          return Text(
+            'Takas İlanı Sahibi: ${snapshot.data!.toString().toUpperCase()}',
+            style: TextStyle(color: colorOfMainTheme, fontSize: 20),
+          );
+        }else {
+        return CircularProgressIndicator(color: colorOfMainTheme,);
+        }
+
+      })
+      
+      
+      
+      ,);
 }
 
-SingleChildScrollView buildProductPhotos(BuildContext context) {
+SingleChildScrollView buildProductPhotos(BuildContext context,product) {
   return SingleChildScrollView(
     scrollDirection: Axis.horizontal,
     child: Row(
@@ -154,34 +171,23 @@ SingleChildScrollView buildProductPhotos(BuildContext context) {
             width: MediaQuery.of(context).size.width / 1.2,
             height: MediaQuery.of(context).size.width / 2,
             child: Image.network(
-              'https://images.pexels.com/photos/4397920/pexels-photo-4397920.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+              product['photoproduct']
+             ,
               fit: BoxFit.contain,
             )),
-        Container(
-            width: MediaQuery.of(context).size.width / 1.2,
-            height: MediaQuery.of(context).size.width / 2,
-            child: Image.network(
-              'https://images.pexels.com/photos/4397920/pexels-photo-4397920.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-              fit: BoxFit.contain,
-            )),
-        Container(
-            width: MediaQuery.of(context).size.width / 1.2,
-            height: MediaQuery.of(context).size.width / 2,
-            child: Image.network(
-              'https://images.pexels.com/photos/4397920/pexels-photo-4397920.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-              fit: BoxFit.contain,
-            )),
+
+
       ],
     ),
   );
 }
 
-Container buildProductName() => Container(
+Container buildProductName(product) => Container(
     padding: EdgeInsets.all(15),
     child: Text(
-      'Ürün Adı',
+      product['name'].toString().toUpperCase(),
       style: TextStyle(color: colorOfMainTheme, fontSize: 20),
     ));
 
-Container buildProductDescription() =>
-    Container(padding: EdgeInsets.all(10), child: Text(lorem));
+Container buildProductDescription(product) =>
+    Container(padding: EdgeInsets.all(10), child: Text(product['product_dec']));

@@ -2,7 +2,6 @@ import 'dart:io';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:takasla/main/provider_user.dart';
 
 import '../constants.dart';
 
@@ -128,6 +127,55 @@ class FirabaseService {
             'wanted_category': wanted_category,
             'photoproduct': photoproduct,
           }));
+      return true.toString();
+    } catch (e) {
+      return false.toString();
+    }
+  }
+
+  GetNameByUid(uid) async {
+    var username = '';
+    try {
+      var querysnap = await _firestore.collection('users').get();
+      var liste = querysnap.docs.map((e) => e.data()).toList();
+      for (var i = 0; liste.length > i; i++) {
+        if (liste[i]['id'].toString() == uid.toString()) {
+          username = liste[i]['name'];
+        }
+      }
+
+      return username;
+    } catch (e) {
+      return username;
+    }
+  }
+
+  Future TradeAdd(
+      productForTradeName,
+      productForMyName,
+      deliveryPlace,
+      deliveryDate,
+      userForTrade,
+      userMe,
+      userForTradeApprove,
+      userForMyApprove,
+      myProductPrice,
+      tradeProductPrice,) async {
+    try {
+      sleep(Duration(seconds: 1));
+      await _firestore.collection('trade').doc().set(({
+            'productForTradeName': productForTradeName,
+            'productForMyName': productForMyName,
+            'deliveryPlace': deliveryPlace,
+            'deliveryDate': deliveryDate,
+            'userForTrade': userForTrade,
+            'userMe': userMe,
+            'userForTradeApprove': userForTradeApprove,
+            'userForMyApprove': userForMyApprove,
+            'myProductPrice': myProductPrice,
+            'tradeProductPrice': tradeProductPrice,
+          }));
+
       return true.toString();
     } catch (e) {
       return false.toString();

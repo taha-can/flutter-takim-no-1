@@ -140,14 +140,16 @@ class CustomCard extends CardType {
   late String imageUrl;
   late String text;
   var onPressed;
+  var bgcolor;
   CustomCard(
-      {required this.text, required this.imageUrl, required this.onPressed}) {}
+      {required this.text, required this.imageUrl, required this.onPressed, this.bgcolor}) {}
 }
 class CardType extends StatelessWidget {
   const CardType({Key? key}) : super(key: key);
   String? get imageUrl => null;
   String? get text => null;
   get onPressed => null;
+  get bgcolor => null;
 
   @override
   Widget build(BuildContext context) {
@@ -156,7 +158,7 @@ class CardType extends StatelessWidget {
           boxShadow: [
             BoxShadow(color: colorOfMainTheme, blurRadius: 10, spreadRadius: 0.2)
           ],
-          color: Colors.white,
+          color: (bgcolor == null) ? Colors.white :Colors.greenAccent ,
           borderRadius: BorderRadius.circular(20),
         ),
         padding: const EdgeInsets.all(5.0),
@@ -190,7 +192,7 @@ class CardType extends StatelessWidget {
                       width: 10,
                     ),
                     Icon(
-                      Icons.settings,
+                      Icons.shopping_basket,
                       color: colorOfMainTheme,
                     )
                   ],
