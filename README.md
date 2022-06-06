@@ -203,4 +203,21 @@ Done statüsüne çekilmiş ve ürünün kullanılır hale gelmesi konusunda spr
 
 # Sprint 3
 
+
+
+
+
+
+
+- **Ürün Durumu**: Ekran görüntüleri:
+ ![Screenshot 1](https://github.com/taha-can/flutter-takim-no-1/blob/main/sprint3/Simulator%20Screen%20Shot%20-%20iPhone%2013%20Pro%20-%202022-06-05%20at%2015.16.45.png)
+   ![Screenshot 2](https://github.com/taha-can/flutter-takim-no-1/blob/main/sprint3/Simulator%20Screen%20Shot%20-%20iPhone%2013%20Pro%20-%202022-06-05%20at%2019.03.10.png)
+    ![Screenshot 3](https://github.com/taha-can/flutter-takim-no-1/blob/main/sprint3/Simulator%20Screen%20Shot%20-%20iPhone%2013%20Pro%20-%202022-06-05%20at%2019.03.15.png)
+     ![Screenshot 4](https://github.com/taha-can/flutter-takim-no-1/blob/main/sprint3/Simulator%20Screen%20Shot%20-%20iPhone%2013%20Pro%20-%202022-06-05%20at%2019.39.23.png)
+      ![Screenshot 5](https://github.com/taha-can/flutter-takim-no-1/blob/main/sprint3/Simulator%20Screen%20Shot%20-%20iPhone%2013%20Pro%20-%202022-06-06%20at%2001.39.07.png)
+       ![Screenshot 6](https://github.com/taha-can/flutter-takim-no-1/blob/main/sprint3/Simulator%20Screen%20Shot%20-%20iPhone%2013%20Pro%20-%202022-06-06%20at%2012.15.35.png)
+       ![Screenshot 7](https://github.com/taha-can/flutter-takim-no-1/blob/main/sprint3/Simulator%20Screen%20Shot%20-%20iPhone%2013%20Pro%20-%202022-06-06%20at%2012.46.45.png)
+
+
+
 ---
