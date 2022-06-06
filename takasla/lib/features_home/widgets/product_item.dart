@@ -23,7 +23,7 @@ productItem(product,productName,imageUrl,context){
               children: [
                 Image.network(imageUrl,width: 150,fit: BoxFit.contain,height: 95,),
                 SizedBox(height: 10,),
-                Text(productName,style: TextStyle(fontSize: 13,color: colorOfMainTheme),),
+                Text(productName,style: TextStyle(fontSize: 10,color: colorOfMainTheme),),
               ],
             )),
       ),
