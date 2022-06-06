@@ -4,12 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-import 'package:takasla/features_user/screens/login_screen.dart';
 import 'package:takasla/main/screens/main_body_screen.dart';
 import 'main/constants.dart';
 import 'main/database_connection/firebase.dart';
 import 'main/screens/open_app_screen.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
 
@@ -22,9 +20,9 @@ Future<void> main() async {
 
 
   runApp(
-    ProviderScope(
-      child: const TakasApp(),
-    ),
+
+      const TakasApp(),
+
   );
 }
 
