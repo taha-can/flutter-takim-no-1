@@ -15,7 +15,7 @@ class CardDetailOffer extends StatelessWidget {
           onPressed: () {
             openDetailOffer(context);
           },
-          child: Text('${tradeNot['userForTrade']} ${tradeNot['productForTradeName'].toString().toUpperCase()} ürünü için takasla teklifi geldi. '),
+          child: Text('${tradeNot['userForTrade']} ${tradeNot['productForTradeName'].toString().toUpperCase()} ürünü için takasla teklifi  '),
           color: colorOfMainTheme,
           width: MediaQuery.of(context).size.width / 1.1),
     );

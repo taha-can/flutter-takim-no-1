@@ -45,6 +45,7 @@ class _MyProductScreenState extends State<MyProductScreen> {
                   children: [
                     Column(
                       children: [
+
                         Container(
                             padding: EdgeInsets.all(8),
                             alignment: Alignment.center,
@@ -211,7 +212,7 @@ class _MyProductScreenState extends State<MyProductScreen> {
                               )),
                           CustomButton(
                               onPressed: ()  async {
-                                if(dropdownValue.toString().isNotEmpty && dodString.toString().isNotEmpty ){
+                                if(dropdownValue.toString().isNotEmpty && dodString.toString().isNotEmpty && selectedProductToTrade.toString().isNotEmpty ){
                                   final snackBar = SnackBar(
                                     content: Text('Bir Hata Oluştu'),
                                   );
@@ -265,7 +266,7 @@ class _MyProductScreenState extends State<MyProductScreen> {
           content: SingleChildScrollView(
             child: ListBody(
               children: const <Widget>[
-                Text('Bir Hata Oluştu'),
+                Text('Lütfen Tüm Alanları Seçiniz'),
               ],
             ),
           ),
