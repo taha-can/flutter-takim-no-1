@@ -205,10 +205,10 @@ class FirabaseService {
       userForTradeApprove,
       userForMyApprove,
       myProductPrice,
-      tradeProductPrice,) async {
+      tradeProductPrice,productForTradePhoto,productForMyPhoto) async {
     try {
       sleep(Duration(seconds: 1));
-      await _firestore.collection('trade').doc().set(({
+      await _firestore.collection('trade').doc(offerid).set(({
         'userForTradeId':userForTradeId,
         'userToTradeId':userToTradeId,
           'offerid':offerid,
@@ -222,6 +222,8 @@ class FirabaseService {
             'userForMyApprove': userForMyApprove,
             'myProductPrice': myProductPrice,
             'tradeProductPrice': tradeProductPrice,
+        'productForTradePhoto':productForTradePhoto,
+        'productForMyPhoto':productForMyPhoto,
           }));
 
       return true.toString();
@@ -246,7 +248,23 @@ class FirabaseService {
     }
   }
 
+Future TradeUpdate(offer_id,userForTradeApprove,userForMyApprove) async {
+  try {
+    sleep(Duration(seconds: 1));
+    await _firestore.collection('trade').doc(offer_id).update(({
+      'userForTradeApprove': userForTradeApprove,
+      'userForMyApprove': userForMyApprove,
+    }));
 
+    return true.toString();
+  } catch (e) {
+    return false.toString();
+  }
+
+
+
+
+}
 
 
 

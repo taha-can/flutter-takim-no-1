@@ -13,7 +13,7 @@ class CardDetailOffer extends StatelessWidget {
       padding: EdgeInsets.all(8),
       child: CustomButton(
           onPressed: () {
-            openDetailOffer(context);
+            openDetailOffer(context,tradeNot);
           },
           child: Text('${tradeNot['userForTrade']} ${tradeNot['productForTradeName'].toString().toUpperCase()} ürünü için takasla teklifi  '),
           color: colorOfMainTheme,

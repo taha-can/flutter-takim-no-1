@@ -220,7 +220,7 @@ class _MyProductScreenState extends State<MyProductScreen> {
                                   var usernameToTrade = await FirabaseService().GetNameByUid(selectedProductToTrade['user_id']).then((value)=>value.toString());
                                   var uuid = Uuid();
                                   var offerid = uuid.v1();
-                                  var response = await FirabaseService().TradeAdd(widget.productForTrade['user_id'],selectedProductToTrade['user_id'],offerid, widget.productForTrade['name'],selectedProductToTrade['name'], dropdownValue, dodString, usernameForTrade.toString(),usernameToTrade.toString(), false, true,  widget.productForTrade['price'],selectedProductToTrade['price']).then((value)=>value.toString());
+                                  var response = await FirabaseService().TradeAdd(widget.productForTrade['user_id'],selectedProductToTrade['user_id'],offerid, widget.productForTrade['name'],selectedProductToTrade['name'], dropdownValue, dodString, usernameForTrade.toString(),usernameToTrade.toString(), false, true,  widget.productForTrade['price'],selectedProductToTrade['price'],widget.productForTrade['photoproduct'],selectedProductToTrade['photoproduct']).then((value)=>value.toString());
                                   response == 'true' ? Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=> TradeDelivery(productChange: selectedProductToTrade,productForTrade: widget.productForTrade,dodToSend:dodString,deliverycenter:dropdownValue)))
                                       :ScaffoldMessenger.of(context).showSnackBar(snackBar);
                                 }else{
