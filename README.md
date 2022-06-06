@@ -202,12 +202,24 @@ Done statüsüne çekilmiş ve ürünün kullanılır hale gelmesi konusunda spr
 
 
 # Sprint 3
+ **Sprint Notları**: User Story'ler product backlog'ların içine yazılmıştır. Product backlog item'lara tıklandığında hikayelerin detayları okunabilir.
+
+- **Sprint içinde tamamlanması tahmin edilen puan**:  Puan
+
+- **Puan tamamlama mantığı**: Toplamda proje boyunca tamamlanması gereken 440 puanlık backlog bulunmaktadır. 3 sprint'e bölündüğünde ilk sprint'in en azından 133 puan ile başlaması gerektiğine karar verildi.
+
+- **Backlog düzeni ve Story seçimleri**: Backlog'umuz ilk yapılacak story'lere göre düzenlenmiştir. Sprint başına tahmin edilen puan sayısını geçmeyecek şekilde sıradan seçimler yapılmaktadır. Story başına çıkan tahmin puanı, toplam puanın yarısından az tutulmuştur. 
+
+Story'ler yapılacak işlere (task'lere) bölünmüştür. Miro Board'da gözüken kırmızı item'lar yapılacak işleri (task) gösterirken, mavi item'lar story'leri temsil etmektedir.
+Tasklar kendi içerisinde detaylandırılmış ve scrum metodolojisine uygun olarak ağırlıkları belirlenmiştir. 
+
+- **Daily Scrum**: Daily Scrum toplantılarının zamansal sebeplerden, anlık ulaşım kolaylığı birden fazla ekran paylaşımı ve odalar ayrımı yapılabildiği için  Discord üzerinden yapılmasına karar verilmiştir.
 
 
-
-
-
-
+- **Sprint board update**: Sprint board screenshotları:
+ **Sprint Review**: 
+- **Sprint Retrospective:**
+-**Diğer Notlar**:
 
 - **Ürün Durumu**: Ekran görüntüleri:
  ![Screenshot 1](https://github.com/taha-can/flutter-takim-no-1/blob/main/sprint3/Simulator%20Screen%20Shot%20-%20iPhone%2013%20Pro%20-%202022-06-05%20at%2015.16.45.png)
@@ -217,6 +229,11 @@ Done statüsüne çekilmiş ve ürünün kullanılır hale gelmesi konusunda spr
       ![Screenshot 5](https://github.com/taha-can/flutter-takim-no-1/blob/main/sprint3/Simulator%20Screen%20Shot%20-%20iPhone%2013%20Pro%20-%202022-06-06%20at%2001.39.07.png)
        ![Screenshot 6](https://github.com/taha-can/flutter-takim-no-1/blob/main/sprint3/Simulator%20Screen%20Shot%20-%20iPhone%2013%20Pro%20-%202022-06-06%20at%2012.15.35.png)
        ![Screenshot 7](https://github.com/taha-can/flutter-takim-no-1/blob/main/sprint3/Simulator%20Screen%20Shot%20-%20iPhone%2013%20Pro%20-%202022-06-06%20at%2012.46.45.png)
+            ![Screenshot 8](https://github.com/taha-can/flutter-takim-no-1/blob/main/sprint3/Simulator%20Screen%20Shot%20-%20iPhone%2012%20Pro%20-%202022-06-06%20at%2017.13.12.png)
+                 ![Screenshot 9](https://github.com/taha-can/flutter-takim-no-1/blob/main/sprint3/Simulator%20Screen%20Shot%20-%20iPhone%2012%20Pro%20-%202022-06-06%20at%2017.13.14.png)
+                      ![Screenshot 10](https://github.com/taha-can/flutter-takim-no-1/blob/main/sprint3/Simulator%20Screen%20Shot%20-%20iPhone%2012%20Pro%20-%202022-06-06%20at%2017.57.55.png)
+                           ![Screenshot 11](https://github.com/taha-can/flutter-takim-no-1/blob/main/sprint3/Simulator%20Screen%20Shot%20-%20iPhone%2012%20Pro%20-%202022-06-06%20at%2017.58.01.png)
+                                ![Screenshot 12](https://github.com/taha-can/flutter-takim-no-1/blob/main/sprint3/Simulator%20Screen%20Shot%20-%20iPhone%2012%20Pro%20-%202022-06-06%20at%2017.58.08.png)
 
 
 
