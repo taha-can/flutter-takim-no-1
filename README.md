@@ -217,6 +217,11 @@ Done statüsüne çekilmiş ve ürünün kullanılır hale gelmesi konusunda spr
       ![Screenshot 5](https://github.com/taha-can/flutter-takim-no-1/blob/main/sprint3/Simulator%20Screen%20Shot%20-%20iPhone%2013%20Pro%20-%202022-06-06%20at%2001.39.07.png)
        ![Screenshot 6](https://github.com/taha-can/flutter-takim-no-1/blob/main/sprint3/Simulator%20Screen%20Shot%20-%20iPhone%2013%20Pro%20-%202022-06-06%20at%2012.15.35.png)
        ![Screenshot 7](https://github.com/taha-can/flutter-takim-no-1/blob/main/sprint3/Simulator%20Screen%20Shot%20-%20iPhone%2013%20Pro%20-%202022-06-06%20at%2012.46.45.png)
+            ![Screenshot 8](https://github.com/taha-can/flutter-takim-no-1/blob/main/sprint3/Simulator%20Screen%20Shot%20-%20iPhone%2012%20Pro%20-%202022-06-06%20at%2017.13.12.png)
+                 ![Screenshot 9](https://github.com/taha-can/flutter-takim-no-1/blob/main/sprint3/Simulator%20Screen%20Shot%20-%20iPhone%2012%20Pro%20-%202022-06-06%20at%2017.13.14.png)
+                      ![Screenshot 10](https://github.com/taha-can/flutter-takim-no-1/blob/main/sprint3/Simulator%20Screen%20Shot%20-%20iPhone%2012%20Pro%20-%202022-06-06%20at%2017.57.55.png)
+                           ![Screenshot 11](https://github.com/taha-can/flutter-takim-no-1/blob/main/sprint3/Simulator%20Screen%20Shot%20-%20iPhone%2012%20Pro%20-%202022-06-06%20at%2017.58.01.png)
+                                ![Screenshot 12](https://github.com/taha-can/flutter-takim-no-1/blob/main/sprint3/Simulator%20Screen%20Shot%20-%20iPhone%2012%20Pro%20-%202022-06-06%20at%2017.58.08.png)
 
 
 
