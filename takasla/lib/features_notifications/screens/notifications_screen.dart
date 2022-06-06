@@ -26,27 +26,15 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
       child: ListView(
         children: [
           Container(
+            child: Center(child: Text('Bildirimler Çok Yakında Sizlerle :)',style: TextStyle(fontSize: 35),)),
+          ),
+          Container(
               height: MediaQuery.of(context).size.height / 8,
               width: MediaQuery.of(context).size.width / 1.2,
               child: Card(
                 child: Row(
                   children: [
-                    Expanded(
-                        child: TextButton(
-                          onPressed: () {
-                            Navigator.of(context).push(MaterialPageRoute(builder: (context)=> FullSizeNotification(info: 'Ürününüz Ekibimiz Tarafından Onaylandı',)));
-                          },
-                          child: Align(
-                              alignment: Alignment.centerLeft,child: Row(
-                                children: [
-                                  Icon(Icons.add_alert,color: colorOfMainTheme,),
-                                  SizedBox(width: 10,),
-                                  Text('Ürününüz Onaylandı',style: TextStyle(color: colorOfMainTheme),),
-                                ],
-                              )),
-                          style: ButtonStyle(
-                              fixedSize: MaterialStateProperty.all(Size(100, 100))),
-                        ))
+
                   ],
                 ),
               )),
@@ -56,3 +44,20 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
     );
   }
 }
+//  Expanded(
+//                         child: TextButton(
+//                           onPressed: () {
+//                           },
+//                           child: Align(
+//                               alignment: Alignment.centerLeft,child: Row(
+//                                 children: [
+//                                   Icon(Icons.add_alert,color: colorOfMainTheme,),
+//                                   SizedBox(width: 10,),
+//                                   Text('Ürününüz Onaylandı',style: TextStyle(color: colorOfMainTheme),),
+//                                 ],
+//                               )),
+//                           style: ButtonStyle(
+//                               fixedSize: MaterialStateProperty.all(Size(100, 100))),
+//                         )
+//
+//                     )

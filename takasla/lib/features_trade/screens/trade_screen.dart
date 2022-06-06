@@ -108,7 +108,7 @@ class _TradeScreenState extends State<TradeScreen> {
                         File(pickedFile!.path),
                         width: MediaQuery.of(context).size.width / 1.1,
                         height: MediaQuery.of(context).size.height / 3.5,
-                        fit: BoxFit.cover,
+                        fit: BoxFit.contain,
                       )),
 
               ],

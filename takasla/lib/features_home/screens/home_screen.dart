@@ -56,88 +56,7 @@ class _HomeScreenState extends State<HomeScreen> {
             Container(
               child: Column(
                 children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Container(
-                      padding: EdgeInsets.all(3),
-                      child:Container(
-                          alignment: Alignment.center,
-                            padding: EdgeInsets.all(8),
-                            child: ElevatedButton(
-                              onPressed: (){},
-                              child: Text('Ev&Yaşam',style: TextStyle(color: Colors.white),),
-                              style: ButtonStyle(backgroundColor: MaterialStateProperty.all(colorOfMainTheme),maximumSize: MaterialStateProperty.all(Size(150, 400))),
-                            )),
 
-                    ),
-                    Container(
-                      padding: EdgeInsets.all(3),
-                      child:Container(
-                          alignment: Alignment.center,
-                          padding: EdgeInsets.all(8),
-                          child: ElevatedButton(
-                            onPressed: (){},
-                            child: Text('Kıyafet',style: TextStyle(color: Colors.white),),
-                            style: ButtonStyle(backgroundColor: MaterialStateProperty.all(colorOfMainTheme),maximumSize: MaterialStateProperty.all(Size(150, 400))),
-                          )),
-
-                    ),
-                    Container(
-                      padding: EdgeInsets.all(3),
-                      child:Container(
-                          alignment: Alignment.center,
-                          padding: EdgeInsets.all(8),
-                          child: ElevatedButton(
-                            onPressed: (){},
-                            child: Text('Eğitim',style: TextStyle(color: Colors.white),),
-                            style: ButtonStyle(backgroundColor: MaterialStateProperty.all(colorOfMainTheme),maximumSize: MaterialStateProperty.all(Size(150, 400))),
-                          )),
-
-                    ),
-                  ],),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Container(
-                        padding: EdgeInsets.all(3),
-                        child:Container(
-                            alignment: Alignment.center,
-                            padding: EdgeInsets.all(8),
-                            child: ElevatedButton(
-                              onPressed: (){},
-                              child: Text('Spor',style: TextStyle(color: Colors.white),),
-                              style: ButtonStyle(backgroundColor: MaterialStateProperty.all(colorOfMainTheme),maximumSize: MaterialStateProperty.all(Size(150, 400))),
-                            )),
-
-                      ),
-                      Container(
-                        padding: EdgeInsets.all(3),
-                        child:Container(
-                            alignment: Alignment.center,
-                            padding: EdgeInsets.all(8),
-                            child: ElevatedButton(
-                              onPressed: (){},
-                              child: Text('Elektronik',style: TextStyle(color: Colors.white),),
-                              style: ButtonStyle(backgroundColor: MaterialStateProperty.all(colorOfMainTheme),maximumSize: MaterialStateProperty.all(Size(150, 400))),
-                            )),
-
-                      ),
-                      Container(
-                        padding: EdgeInsets.all(3),
-                        child:Container(
-                            alignment: Alignment.center,
-                            padding: EdgeInsets.all(8),
-                            child: ElevatedButton(
-                              onPressed: (){},
-                              child: Text('Biletler&Kuponlar',style: TextStyle(color: Colors.white),),
-                              style: ButtonStyle(backgroundColor: MaterialStateProperty.all(colorOfMainTheme),maximumSize: MaterialStateProperty.all(Size(95, 400))),
-                            )),
-
-                      ),
-
-
-                    ],),
 
 
                 ],
@@ -148,7 +67,7 @@ class _HomeScreenState extends State<HomeScreen> {
             future: FirabaseService().GetProductsAll(),
             builder: (context, AsyncSnapshot<List> snapshot) {
               if (snapshot.hasData) {
-                return current_user!.email == 'theteamflutterno1@gmail.com' ? Center(child: Text('Benim Ürünlerim'),):GridView.count(
+                return current_user!.email == 'theteamflutterno1@gmail.com' ? Center(child: Text('Ürünler Sayfasını Görebilmek İçin Lütfen Üye Olunuz'),):GridView.count(
                   physics: NeverScrollableScrollPhysics(),
                   shrinkWrap: true,
                   scrollDirection: Axis.vertical,
@@ -174,3 +93,88 @@ class _HomeScreenState extends State<HomeScreen> {
     ));
   }
 }
+
+
+
+// Row(
+//                     mainAxisAlignment: MainAxisAlignment.center,
+//                   children: [
+//                     Container(
+//                       padding: EdgeInsets.all(3),
+//                       child:Container(
+//                           alignment: Alignment.center,
+//                             padding: EdgeInsets.all(8),
+//                             child: ElevatedButton(
+//                               onPressed: (){},
+//                               child: Text('Ev&Yaşam',style: TextStyle(color: Colors.white),),
+//                               style: ButtonStyle(backgroundColor: MaterialStateProperty.all(colorOfMainTheme),maximumSize: MaterialStateProperty.all(Size(150, 400))),
+//                             )),
+//
+//                     ),
+//                     Container(
+//                       padding: EdgeInsets.all(3),
+//                       child:Container(
+//                           alignment: Alignment.center,
+//                           padding: EdgeInsets.all(8),
+//                           child: ElevatedButton(
+//                             onPressed: (){},
+//                             child: Text('Kıyafet',style: TextStyle(color: Colors.white),),
+//                             style: ButtonStyle(backgroundColor: MaterialStateProperty.all(colorOfMainTheme),maximumSize: MaterialStateProperty.all(Size(150, 400))),
+//                           )),
+//
+//                     ),
+//                     Container(
+//                       padding: EdgeInsets.all(3),
+//                       child:Container(
+//                           alignment: Alignment.center,
+//                           padding: EdgeInsets.all(8),
+//                           child: ElevatedButton(
+//                             onPressed: (){},
+//                             child: Text('Eğitim',style: TextStyle(color: Colors.white),),
+//                             style: ButtonStyle(backgroundColor: MaterialStateProperty.all(colorOfMainTheme),maximumSize: MaterialStateProperty.all(Size(150, 400))),
+//                           )),
+//
+//                     ),
+//                   ],),
+//                   Row(
+//                     mainAxisAlignment: MainAxisAlignment.center,
+//                     children: [
+//                       Container(
+//                         padding: EdgeInsets.all(3),
+//                         child:Container(
+//                             alignment: Alignment.center,
+//                             padding: EdgeInsets.all(8),
+//                             child: ElevatedButton(
+//                               onPressed: (){},
+//                               child: Text('Spor',style: TextStyle(color: Colors.white),),
+//                               style: ButtonStyle(backgroundColor: MaterialStateProperty.all(colorOfMainTheme),maximumSize: MaterialStateProperty.all(Size(150, 400))),
+//                             )),
+//
+//                       ),
+//                       Container(
+//                         padding: EdgeInsets.all(3),
+//                         child:Container(
+//                             alignment: Alignment.center,
+//                             padding: EdgeInsets.all(8),
+//                             child: ElevatedButton(
+//                               onPressed: (){},
+//                               child: Text('Elektronik',style: TextStyle(color: Colors.white),),
+//                               style: ButtonStyle(backgroundColor: MaterialStateProperty.all(colorOfMainTheme),maximumSize: MaterialStateProperty.all(Size(150, 400))),
+//                             )),
+//
+//                       ),
+//                       Container(
+//                         padding: EdgeInsets.all(3),
+//                         child:Container(
+//                             alignment: Alignment.center,
+//                             padding: EdgeInsets.all(8),
+//                             child: ElevatedButton(
+//                               onPressed: (){},
+//                               child: Text('Biletler&Kuponlar',style: TextStyle(color: Colors.white),),
+//                               style: ButtonStyle(backgroundColor: MaterialStateProperty.all(colorOfMainTheme),maximumSize: MaterialStateProperty.all(Size(95, 400))),
+//                             )),
+//
+//                       ),
+//
+//
+//                     ],),

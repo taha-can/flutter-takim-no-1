@@ -21,23 +21,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
       body: Container(
         child: ListView(
           children: [
-            Row(
-              children: [
-                Icon(
-                  Icons.search,
-                  color: colorOfMainTheme,
-                ),
-                Flexible(
-                  child: Container(
-                    padding: const EdgeInsets.all(10.0),
-                    child: CustomSearchInput(
-                        color: colorOfMainTheme,
-                        controller: searchProfile,
-                        hintText: 'Arama'),
-                  ),
-                ),
-              ],
-            ),
+
             Expanded(
               child: FutureBuilder(
                 future: FirabaseService().GetProductsByUid(),
@@ -54,7 +38,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       mainAxisSpacing: 12,
                       children: List.generate(
                           snapshot.data!.length,
-                          (index) => CustomCard(
+                          (index) =>  CustomCard(
                               onPressed: () {
                                 Navigator.of(context).push(MaterialPageRoute(
                                     builder: (builder) =>
@@ -75,3 +59,22 @@ class _ProfileScreenState extends State<ProfileScreen> {
     );
   }
 }
+
+
+//   Row(
+//               children: [
+//                 Icon(
+//                   Icons.search,
+//                   color: colorOfMainTheme,
+//                 ),
+//                 Flexible(
+//                   child: Container(
+//                     padding: const EdgeInsets.all(10.0),
+//                     child: CustomSearchInput(
+//                         color: colorOfMainTheme,
+//                         controller: searchProfile,
+//                         hintText: 'Arama'),
+//                   ),
+//                 ),
+//               ],
+//             ),

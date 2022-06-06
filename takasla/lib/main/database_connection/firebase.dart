@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'dart:math';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -208,7 +209,11 @@ class FirabaseService {
       tradeProductPrice,productForTradePhoto,productForMyPhoto) async {
     try {
       sleep(Duration(seconds: 1));
+
+      var rng = new Random();
+      var code = rng.nextInt(900000) + 100000;
       await _firestore.collection('trade').doc(offerid).set(({
+        'deliverycode':code,
         'userForTradeId':userForTradeId,
         'userToTradeId':userToTradeId,
           'offerid':offerid,

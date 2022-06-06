@@ -191,10 +191,7 @@ class CardType extends StatelessWidget {
                     SizedBox(
                       width: 10,
                     ),
-                    Icon(
-                      Icons.shopping_basket,
-                      color: colorOfMainTheme,
-                    )
+
                   ],
                 ),
               ],

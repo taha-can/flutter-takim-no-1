@@ -12,8 +12,9 @@ class ApprovedScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var rng = new Random();
-    var code = rng.nextInt(900000) + 100000;
+
+
+
 
 
     return Scaffold(
@@ -75,7 +76,7 @@ class ApprovedScreen extends StatelessWidget {
                       style: TextStyle(color: colorOfMainTheme, fontSize: 16),
                     ),
                     Text(
-                      'Yurtiçi Kargo Teslimat Kodu : ${code}',
+                      'Yurtiçi Kargo Teslimat Kodu : ${info['deliverycode']}',
                       style: TextStyle(color: colorOfMainTheme, fontSize: 16),
                     ),
                     Text(
