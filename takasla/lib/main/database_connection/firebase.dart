@@ -137,7 +137,7 @@ class FirabaseService {
   UpdateProduct(product_id,category_id, name, price, product_dec, wanted_category,
       photoproduct) async {
     try {
-      sleep(Duration(seconds: 5));
+      sleep(Duration(seconds: 2));
       var current_user = FirebaseAuth.instance.currentUser;
       await _firestore.collection('all_products').doc(product_id).set(({
         'product_id':product_id,
@@ -149,6 +149,18 @@ class FirabaseService {
         'wanted_category': wanted_category,
         'photoproduct': photoproduct,
       }));
+      return true.toString();
+    } catch (e) {
+      return false.toString();
+    }
+  }
+
+
+
+  DeleteProduct(product_id) async {
+    try {
+      sleep(Duration(seconds: 2));
+      await _firestore.collection('all_products').doc(product_id).delete();
       return true.toString();
     } catch (e) {
       return false.toString();
