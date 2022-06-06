@@ -242,7 +242,7 @@ Done statüsüne çekilmiş ve ürünün kullanılır hale gelmesi konusunda spr
  - profil bilgileri duzenleme ekranı hazırlandı ve servisi yazıldı
  ![sprint3 review toplantısı](https://github.com/taha-can/flutter-takim-no-1/blob/main/sprint3/sprint%203-1.PNG)
  
- Android kullanıcıları için ürünün apk:![ürün apk](https://drive.google.com/drive/folders/13z10PlJLqvGui66WfrdAsrPrvKQwnN8U?usp=sharing)
+ Android kullanıcıları için ürünün apk:https://drive.google.com/drive/folders/13z10PlJLqvGui66WfrdAsrPrvKQwnN8U?usp=sharing
  
 - **Sprint Retrospective:**
 - ilk iki sprintin aksine bu sprintte iletişim eksikliği daha fazla yaşandı.
