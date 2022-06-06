@@ -1,8 +1,12 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:takasla/features_user_profile/screens/user_profile_info.dart';
 import 'package:takasla/main/constants.dart';
 
+import '../main/database_connection/firebase.dart';
+
 buildMainScreenAppBar(context) {
+  var current_user = FirebaseAuth.instance.currentUser;
   return AppBar(
     elevation: 0,
     backgroundColor: Colors.transparent,
@@ -11,10 +15,19 @@ buildMainScreenAppBar(context) {
     title: Row(
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
-        Text(
-          '',
-          style: TextStyle(color: colorOfMainTheme),
-        ),
+        FutureBuilder(
+            future: FirabaseService().GetNameByUid(current_user!.uid)
+            ,builder: (context,AsyncSnapshot snapshot){
+          if (snapshot.hasData){
+            return Text(
+              'Merhaba ${snapshot.data!.toString().toUpperCase()}',
+              style: TextStyle(color: colorOfMainTheme, fontSize: 20),
+            );
+          }else {
+            return CircularProgressIndicator(color: colorOfMainTheme,);
+          }
+
+        })
       ],
     ),
     actions: [

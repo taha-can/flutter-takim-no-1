@@ -32,23 +32,23 @@ class _HomeScreenState extends State<HomeScreen> {
                       child: Container(
                     decoration: BoxDecoration(
                         image: DecorationImage(
-                            image: AssetImage('assets/images/takasla.png'))),
+                            image: AssetImage('assets/images/kampanya1.png'))),
                     height: MediaQuery.of(context).size.height / 5,
                     width: MediaQuery.of(context).size.width / 1.2,
                     child: Align(
                         alignment: Alignment.bottomCenter,
-                        child: Text('Kampanya')),
+                        child: Container()),
                   )),
                   Card(
                       child: Container(
                     decoration: BoxDecoration(
                         image: DecorationImage(
-                            image: AssetImage('assets/images/takasla.png'))),
+                            image: AssetImage('assets/images/kampanya2.png'))),
                     height: MediaQuery.of(context).size.height / 5,
                     width: MediaQuery.of(context).size.width / 1.2,
                     child: Align(
                         alignment: Alignment.bottomCenter,
-                        child: Text('Kampanya')),
+                        child: Container()),
                   )),
                 ],
               ),

@@ -108,7 +108,7 @@ Future<void> openDetailOffer(context, offer) async {
               CustomButton(
                   onPressed: () {
                     if(result == 'Onaylandı'){
-                      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=> ApprovedScreen()));
+                      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=> ApprovedScreen(info: offer,)));
                     }else if (result == 'Reddedildi'){
                       Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>RejectScreen()));
                     }else{
@@ -148,7 +148,7 @@ Future<void> openDetailOffer(context, offer) async {
                   );
                   var response = await FirabaseService().TradeUpdate(offer['offerid'], true,true).then((value)=>value.toString());
                   response == 'true' ?
-                  Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>ApprovedScreen())):
+                  Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>ApprovedScreen(info: offer,))):
                   ScaffoldMessenger.of(context).showSnackBar(snackBar);
 
                 },
