@@ -26,9 +26,7 @@ class OpenAppScreen extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    Row(
-                      children: [Text('Müşteri Yorumları')],
-                    ),
+
                     Row(
                       children: [
                         Column(
