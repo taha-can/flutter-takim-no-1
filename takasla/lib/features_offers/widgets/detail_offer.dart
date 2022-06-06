@@ -16,16 +16,6 @@ Future<void> openDetailOffer(context) async {
             child: ListBody(
               children: <Widget>[
                 Row(
-                  children: [Text('DatePicker')],
-                ),
-                Row(
-                  children: [
-                    Container(
-                        padding: EdgeInsets.all(8), child: Text(('Ürün Adı')))
-                  ],
-                ),
-                Text('İÇİN'),
-                Row(
                   children: [],
                 ),
               ],

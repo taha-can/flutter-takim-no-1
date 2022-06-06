@@ -10,6 +10,7 @@ import 'package:takasla/main/database_connection/firebase.dart';
 import 'package:takasla/main/screens/main_body_screen.dart';
 import 'package:takasla/main/ui_components.dart';
 import 'package:takasla/widgets/main_body_appbar.dart';
+import 'package:uuid/uuid.dart';
 
 class TradeScreen extends StatefulWidget {
   const TradeScreen({Key? key}) : super(key: key);
@@ -199,8 +200,11 @@ class _TradeScreenState extends State<TradeScreen> {
                                 await Future.delayed(
                                     const Duration(seconds: 2));
                                 var photoproduct = await _UploadFile('work');
+                                var uuid = Uuid();
+                                var product_id = uuid.v1();
                                 var response = await FirabaseService()
                                     .AddProduct(
+                                    product_id,
                                         dropdownValue,
                                         controllerProductName.text,
                                         controllerProductPrice.text,

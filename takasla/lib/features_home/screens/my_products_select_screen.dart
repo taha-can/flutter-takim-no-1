@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:takasla/main/constants.dart';
-
+import 'package:uuid/uuid.dart';
 import '../../features_trade/screens/trade_deliver_screen.dart';
 import '../../main/database_connection/firebase.dart';
 import '../../main/ui_components.dart';
@@ -211,15 +211,20 @@ class _MyProductScreenState extends State<MyProductScreen> {
                               )),
                           CustomButton(
                               onPressed: ()  async {
-                                final snackBar = SnackBar(
-                                  content: Text('Bir Hata Oluştu'),
-                                );
-                                var response = await FirabaseService().TradeAdd( widget.productForTrade['name'],selectedProductToTrade['name'], dropdownValue, dodString, widget.productForTrade['user_id'],selectedProductToTrade['user_id'], false, true,  widget.productForTrade['price'],selectedProductToTrade['price']).then((value)=>value.toString());
-                                print(response);
-                                response == 'true' ? Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=> TradeDelivery(productChange: selectedProductToTrade,productForTrade: widget.productForTrade,dodToSend:dodString,deliverycenter:dropdownValue)))
-                                :ScaffoldMessenger.of(context).showSnackBar(snackBar);
-
-
+                                if(dropdownValue.toString().isNotEmpty && dodString.toString().isNotEmpty ){
+                                  final snackBar = SnackBar(
+                                    content: Text('Bir Hata Oluştu'),
+                                  );
+                                  var usernameForTrade = await FirabaseService().GetNameByUid(widget.productForTrade['user_id']).then((value)=>value.toString());
+                                  var usernameToTrade = await FirabaseService().GetNameByUid(selectedProductToTrade['user_id']).then((value)=>value.toString());
+                                  var uuid = Uuid();
+                                  var offerid = uuid.v1();
+                                  var response = await FirabaseService().TradeAdd(widget.productForTrade['user_id'],selectedProductToTrade['user_id'],offerid, widget.productForTrade['name'],selectedProductToTrade['name'], dropdownValue, dodString, usernameForTrade.toString(),usernameToTrade.toString(), false, true,  widget.productForTrade['price'],selectedProductToTrade['price']).then((value)=>value.toString());
+                                  response == 'true' ? Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=> TradeDelivery(productChange: selectedProductToTrade,productForTrade: widget.productForTrade,dodToSend:dodString,deliverycenter:dropdownValue)))
+                                      :ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                                }else{
+                                  _showMyDialog();
+                                }
                               },
                               child: Text('Teklif Ver'),
                               color: colorOfMainTheme,
@@ -247,4 +252,38 @@ class _MyProductScreenState extends State<MyProductScreen> {
       ),
     );
   }
+
+
+
+  Future<void> _showMyDialog() async {
+    return showDialog<void>(
+      context: context,
+      barrierDismissible: false, // user must tap button!
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: const Text('Hata'),
+          content: SingleChildScrollView(
+            child: ListBody(
+              children: const <Widget>[
+                Text('Bir Hata Oluştu'),
+              ],
+            ),
+          ),
+          actions: <Widget>[
+            TextButton(
+              child: const Text('Kapat'),
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+            ),
+          ],
+        );
+      },
+    );
+  }
+
+
+
+
 }
+

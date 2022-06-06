@@ -113,12 +113,13 @@ class FirabaseService {
     }
   }
 
-  AddProduct(category_id, name, price, product_dec, wanted_category,
+  AddProduct(product_id,category_id, name, price, product_dec, wanted_category,
       photoproduct) async {
     try {
       sleep(Duration(seconds: 5));
       var current_user = FirebaseAuth.instance.currentUser;
-      await _firestore.collection('all_products').doc().set(({
+      await _firestore.collection('all_products').doc(product_id).set(({
+            'product_id':product_id,
             'category_id': category_id,
             'name': name,
             'price': price,
@@ -132,6 +133,35 @@ class FirabaseService {
       return false.toString();
     }
   }
+
+  UpdateProduct(product_id,category_id, name, price, product_dec, wanted_category,
+      photoproduct) async {
+    try {
+      sleep(Duration(seconds: 5));
+      var current_user = FirebaseAuth.instance.currentUser;
+      await _firestore.collection('all_products').doc(product_id).set(({
+        'product_id':product_id,
+        'category_id': category_id,
+        'name': name,
+        'price': price,
+        'product_dec': product_dec,
+        'user_id': current_user!.uid,
+        'wanted_category': wanted_category,
+        'photoproduct': photoproduct,
+      }));
+      return true.toString();
+    } catch (e) {
+      return false.toString();
+    }
+  }
+
+
+
+
+
+
+
+
 
   GetNameByUid(uid) async {
     var username = '';
@@ -151,6 +181,9 @@ class FirabaseService {
   }
 
   Future TradeAdd(
+      userForTradeId,
+      userToTradeId,
+      offerid,
       productForTradeName,
       productForMyName,
       deliveryPlace,
@@ -164,6 +197,9 @@ class FirabaseService {
     try {
       sleep(Duration(seconds: 1));
       await _firestore.collection('trade').doc().set(({
+        'userForTradeId':userForTradeId,
+        'userToTradeId':userToTradeId,
+          'offerid':offerid,
             'productForTradeName': productForTradeName,
             'productForMyName': productForMyName,
             'deliveryPlace': deliveryPlace,
@@ -181,4 +217,25 @@ class FirabaseService {
       return false.toString();
     }
   }
+
+
+
+  TradeAll() async {
+    var trade_list = [];
+    try {
+      var querysnap = await _firestore.collection('trade').get();
+      var liste = querysnap.docs.map((e) => e.data()).toList();
+      for (var i = 0; liste.length > i; i++) {
+        trade_list.add(liste[i]);
+      }
+      return  trade_list;
+    } catch (e) {
+      return  trade_list;
+    }
+  }
+
+
+
+
+
 }

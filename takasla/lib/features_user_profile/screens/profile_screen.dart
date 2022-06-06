@@ -58,7 +58,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                               onPressed: () {
                                 Navigator.of(context).push(MaterialPageRoute(
                                     builder: (builder) =>
-                                        ProdcutInfoArrange()));
+                                        ProdcutInfoArrange(product: snapshot.data![index] ,)));
                               },
                               text: snapshot.data![index]['name'].toString().toUpperCase(),
                               imageUrl: snapshot.data![index]['photoproduct'] )),
