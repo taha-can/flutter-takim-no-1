@@ -93,22 +93,16 @@ Sprint 2
   
 
 - **Sprint Review**: 
- Sprint Review katılımcıları: Busenur Ertek, Şevval Özgirgin, Taha Yusuf Can, Elif Hilal Yaşar
- 1. Sprint tahmin edilmesi gereken tahmini puan 133 ve sprint sonu tamamlanan puan 112 olarak hesaplanmıştır. Ürün için yapılması beklenen logo tasarımı maddesi bir sonraki sprinte aktarılmasına karar verilmiştir.
-  
- 2. Mobil ekranlar için yapılan tasarımların yeniden gözden geçirilip dizayn edilmesine karar verilmiş ve bir sonraki sprintte iş bölümü yapılmasına karar verilmiştir.
-  
- 3. Proje backlog planlama esnasında gündeme alınmayan "kullanıcı data yapılarının oluşturulması ve api testleri" maddesi backlog'a yansıtılmış ve sonraki sprintlerde gündeme alınmak üzere eklenmiştir.
-  
- 4. İlk sprint sonrası ortaya çıkan ürün testleri ve email ile onay kodu gönderim servisi başarılı bir şekilde çalışmıştır.
-  
- 5. Takas ürün ekleme ekranının ve kullanıcıyı karşılaştıran ana sayfanın detaylarında değişikliğe gidilerek yeniden tasarlanması karar verilmiştir.
-  
- 6. Proje backlog maddelerinde eklenmeyen "ürün giden teklif ve gelen teklif ekranları" maddesi yeni madde olarak eklenmesine karar verilmiştir.
+Sprint Review katılımcıları: Busenur Ertek, Şevval Özgirgin, Taha Yusuf Can, Elif Hilal Yaşar
+- Sprint tahmin edilmesi gereken tahmini puan 133 ve sprint sonu tamamlanan puan 112 olarak hesaplanmıştır. Ürün için yapılması beklenen logo tasarımı maddesi bir sonraki sprinte aktarılmasına karar verilmiştir.
+- Mobil ekranlar için yapılan tasarımların yeniden gözden geçirilip dizayn edilmesine karar verilmiş ve bir sonraki sprintte iş bölümü yapılmasına karar verilmiştir.
+- Proje backlog planlama esnasında gündeme alınmayan "kullanıcı data yapılarının oluşturulması ve api testleri" maddesi backlog'a yansıtılmış ve sonraki sprintlerde gündeme alınmak üzere eklenmiştir.
+- İlk sprint sonrası ortaya çıkan ürün testleri ve email ile onay kodu gönderim servisi başarılı bir şekilde çalışmıştır.
+- Takas ürün ekleme ekranının ve kullanıcıyı karşılaştıran ana sayfanın detaylarında değişikliğe gidilerek yeniden tasarlanması karar verilmiştir.
+- Proje backlog maddelerinde eklenmeyen "ürün giden teklif ve gelen teklif ekranları" maddesi yeni madde olarak eklenmesine karar verilmiştir.
+- Kayıt ekranında telefon bilgisinin eklenmesine ve KVKK onay metninin eklenmesine karar verildi.
+- Proje tasarım toplantılarında gündeme gelmeyen Popup dizayn tasarımları gündeme geldi ve etkili popup tasarımları yapılması için çalışma yapılacağı belirtildi.
  
- 7. Kayıt ekranında telefon bilgisinin eklenmesine ve KVKK onay metninin eklenmesine karar verildi.
- 
- 8. Proje tasarım toplantılarında gündeme gelmeyen Popup dizayn tasarımları gündeme geldi ve etkili popup tasarımları yapılması için çalışma yapılacağı belirtildi.
  ![Sprint Review](https://github.com/taha-can/flutter-takim-no-1/blob/main/sprint1/sprint1-son.PNG)
 
 - **Sprint Retrospective:**
@@ -208,43 +202,44 @@ Done statüsüne çekilmiş ve ürünün kullanılır hale gelmesi konusunda spr
 
 - **Puan tamamlama mantığı**: Toplamda proje boyunca tamamlanması gereken 440 puanlık backlog bulunmaktadır. 3 sprint'e bölündüğünde ilk sprint'in en azından 133 puan ile başlaması gerektiğine karar verildi. 3. sprintte kalan 187 puanı eritmek planlanmıştır.
 
-- **Backlog düzeni ve Story seçimleri**: Backlog'umuz ilk yapılacak story'lere göre düzenlenmiştir. Sprint başına tahmin edilen puan sayısını geçmeyecek şekilde sıradan seçimler yapılmaktadır. Story başına çıkan tahmin puanı, toplam puanın yarısından az tutulmuştur. 
-
-Story'ler yapılacak işlere (task'lere) bölünmüştür. Miro Board'da gözüken kırmızı item'lar yapılacak işleri (task) gösterirken, mavi item'lar story'leri temsil etmektedir.
-Tasklar kendi içerisinde detaylandırılmış ve scrum metodolojisine uygun olarak ağırlıkları belirlenmiştir. 
-
-3. Sprint backlog görüntüsü
+- **Backlog düzeni ve Story seçimleri**: 
+- Backlog'umuz ilk yapılacak story'lere göre düzenlenmiştir. Sprint başına tahmin edilen puan sayısını geçmeyecek şekilde sıradan seçimler yapılmaktadır. Story başına çıkan tahmin puanı, toplam puanın yarısından az tutulmuştur. 
+- Story'ler yapılacak işlere (task'lere) bölünmüştür. Miro Board'da gözüken kırmızı item'lar yapılacak işleri (task) gösterirken, mavi item'lar story'leri temsil etmektedir.
+- Tasklar kendi içerisinde detaylandırılmış ve scrum metodolojisine uygun olarak ağırlıkları belirlenmiştir. 
+- 3. Sprint backlog görüntüsü
 ![sprint3 backlog](https://github.com/taha-can/flutter-takim-no-1/blob/main/sprint3/sprint3%20backlog.PNG)
 
-- **Daily Scrum**: Daily Scrum toplantılarının zamansal sebeplerden, anlık ulaşım kolaylığı birden fazla ekran paylaşımı ve odalar ayrımı yapılabildiği için  Discord üzerinden yapılmasına karar verilmiştir.
+- **Daily Scrum**: 
+- Daily Scrum toplantılarının zamansal sebeplerden, anlık ulaşım kolaylığı birden fazla ekran paylaşımı ve odalar ayrımı yapılabildiği için  Discord üzerinden yapılmasına karar verilmiştir.
 - Daily toplantıları için 3.sprintte sabah 9.30 da biraraya gelinmesi kararlaştırılmıştır.
 
 ![sprint3 daily toplantısı örnek](https://github.com/taha-can/flutter-takim-no-1/blob/main/sprint3/3.sprint%20daily.PNG)
 
  **Sprint Review**: 
- 3.ve son sprintte kalan 187 puanın eritilmesi planlanmıştı ancak bu sprintte 124 puan eritildi. 
- Admin ve takaslama noktasında kullanılacak web ekranları için zaman yetişmediği için şimdilik onaya gönderilen işlemler 15 saniyelik zaman sayacı sonrası otomatik olarka kabul edilmek üzere tasarlanmıştır.
- Bildirim ekranları, ürün ekleme, takas noktası ekranları detaylandırılmış ve uygulama üzerinde gösterilmiştir.
- Kullanıcı misafir ekranı olarak ana sayfada gezebilir eğer takas yapmak isterse üye girişi yapılması beklenir.
- Üye bilgileri için mail aktivasyonu gereklidir. Onaylanan hesap ile birlikte profil ekranı düzenleme ve ürün ekleme-ürün takaslama ekranlarına erişim sağlayabilir.
- Ana sayfada kampanyanlar mevcut olacak ve banner olarak görüntülenecek
+ - 3.ve son sprintte kalan 187 puanın eritilmesi planlanmıştı ancak bu sprintte 124 puan eritildi. 
+ - Admin ve takaslama noktasında kullanılacak web ekranları için zaman yetişmediği için şimdilik onaya gönderilen işlemler 15 saniyelik zaman sayacı sonrası otomatik olarka kabul edilmek üzere tasarlanmıştır.
+ - Bildirim ekranları, ürün ekleme, takas noktası ekranları detaylandırılmış ve uygulama üzerinde gösterilmiştir. 
+ - Kullanıcı misafir ekranı olarak ana sayfada gezebilir eğer takas yapmak isterse üye girişi yapılması beklenir.
+ - Üye bilgileri için mail aktivasyonu gereklidir. Onaylanan hesap ile birlikte profil ekranı düzenleme ve ürün ekleme-ürün takaslama ekranlarına erişim sağlayabilir.
+ - Ana sayfada kampanyanlar mevcut olacak ve banner olarak görüntülenecek
  ![kampanya banner1](https://github.com/taha-can/flutter-takim-no-1/blob/main/sprint3/kampanya1.png)
  ![kampanya banner2](https://github.com/taha-can/flutter-takim-no-1/blob/main/sprint3/kampanya2.png)
  
- Banner çalışmaları ürüne eklenmiştir.
- Ayrıca logo tasarımları yapılmıştır. 2 farklı logo oluşturulmuştur. 
+ - Banner çalışmaları ürüne eklenmiştir.
+ - Ayrıca logo tasarımları yapılmıştır. 2 farklı logo oluşturulmuştur. 
  ![logo çalışması1](https://github.com/taha-can/flutter-takim-no-1/blob/main/sprint3/takasla%20logo%20%C3%A7al%C4%B1%C5%9Fmas%C4%B1.jpeg)
  ![logo çalışması 2](https://github.com/taha-can/flutter-takim-no-1/blob/main/sprint3/takasla%20logo%202.jpeg)
- Sprint review toplantısında ayrıca dev ekibinin aldığı notlar aşağıdaki gibidir;
--current user state management ile kontrol edildi,
--disposlama yapıldı,
--ürün ekleme servisleri ve firestorage kurulumu yapıldı,
--ürün fotograf boyutu ayarlandı,
--bildirim servisleri yazılamadı,
--bildirim ekranı prototype duzenı ıcın ayarlandı
--teklif ekranları duzenlendı ve servislerine yazılmaya baslandı
--misafir kullanıcısı oluşturuldu
--profil bilgileri duzenleme ekranı hazırlandı ve servisi yazıldı
+ 
+ - Sprint review toplantısında ayrıca dev ekibinin aldığı notlar aşağıdaki gibidir.
+ - current user state management ile kontrol edildi,
+ - disposlama yapıldı,
+ - ürün ekleme servisleri ve firestorage kurulumu yapıldı.
+ - ürün fotograf boyutu ayarlandı,
+ - bildirim servisleri yazılamadı, 
+ - bildirim ekranı prototype duzenı ıcın ayarlandı
+ - teklif ekranları duzenlendı ve servislerine yazılmaya baslandı
+ - misafir kullanıcısı oluşturuldu
+ - profil bilgileri duzenleme ekranı hazırlandı ve servisi yazıldı
  ![sprint3 review toplantısı](https://github.com/taha-can/flutter-takim-no-1/blob/main/sprint3/sprint%203-1.PNG)
  
  Android kullanıcıları için ürünün apk:![ürün apk](https://drive.google.com/drive/folders/13z10PlJLqvGui66WfrdAsrPrvKQwnN8U?usp=sharing)
