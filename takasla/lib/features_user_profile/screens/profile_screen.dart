@@ -19,17 +19,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        child: ListView(
-          children: [
-
-            Expanded(
-              child: FutureBuilder(
+        child:
+           FutureBuilder(
                 future: FirabaseService().GetProductsByUid(),
                 builder: (context, AsyncSnapshot<List> snapshot) {
                   if (snapshot.hasData) {
                     return current_user!.email == 'theteamflutterno1@gmail.com' ? Center(child: Text('Benim Ürünlerim'),):GridView.count(
-                      physics: NeverScrollableScrollPhysics(),
-                      shrinkWrap: true,
                       scrollDirection: Axis.vertical,
                       padding: EdgeInsets.all(8),
                       childAspectRatio: 0.8,
@@ -52,9 +47,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   }
                 },
               ),
-            ),
-          ],
-        ),
+
+
       ),
     );
   }

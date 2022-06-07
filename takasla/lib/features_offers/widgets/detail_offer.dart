@@ -29,13 +29,11 @@ Future<void> openDetailOffer(context, offer) async {
       return AlertDialog(
         title: Text(
             'Teklif @${offer['userMe']}  ${offer['productForTradeName']} Ürünü'),
-        content: Expanded(
+        content: Container(
           child: SingleChildScrollView(
             padding: EdgeInsets.all(10),
-            child: ListBody(
+            child: Column(
               children: <Widget>[
-                Column(
-                  children: [
                     Container(
                       alignment: Alignment.center,
                       margin: EdgeInsets.all(8),
@@ -95,8 +93,7 @@ Future<void> openDetailOffer(context, offer) async {
                         ],
                       ),
                     )
-                  ],
-                ),
+
               ],
             ),
           ),
