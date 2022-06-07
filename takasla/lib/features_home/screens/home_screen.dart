@@ -21,14 +21,14 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
         body: Container(
       padding: const EdgeInsets.all(8.0),
-      child: ListView(
+      child: Column(
         children: [
-          SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
-            child: Row(
-              children: [
-                Card(
-                    child: Container(
+        SingleChildScrollView(
+        scrollDirection: Axis.horizontal,
+        child: Row(
+          children: [
+            Card(
+                child: Container(
                   // ignore: prefer_const_constructors
                   decoration: BoxDecoration(
                       image: DecorationImage(
@@ -39,8 +39,8 @@ class _HomeScreenState extends State<HomeScreen> {
                       alignment: Alignment.bottomCenter,
                       child: Container()),
                 )),
-                Card(
-                    child: Container(
+            Card(
+                child: Container(
                   decoration: BoxDecoration(
                       image: DecorationImage(
                           image: AssetImage('assets/images/kampanya2.png'))),
@@ -50,44 +50,38 @@ class _HomeScreenState extends State<HomeScreen> {
                       alignment: Alignment.bottomCenter,
                       child: Container()),
                 )),
-              ],
-            ),
-          ),
-          Container(
-            child: Column(
-              children: [
-
-
-
-              ],
-            ),
-          ),
-      Expanded(
-        child: FutureBuilder(
-          future: FirabaseService().GetProductsAll(),
-          builder: (context, AsyncSnapshot<List> snapshot) {
-            if (snapshot.hasData) {
-              return current_user!.email == 'theteamflutterno1@gmail.com' ? Center(child: Text('Ürünler Sayfasını Görebilmek İçin Lütfen Üye Olunuz'),):GridView.count(
-                physics: NeverScrollableScrollPhysics(),
-                shrinkWrap: true,
-                scrollDirection: Axis.vertical,
-                padding: EdgeInsets.all(8),
-                crossAxisCount: MediaQuery.of(context).size.width>500 ? 8 : 3,
-                crossAxisSpacing: 5,
-                mainAxisSpacing: 5,
-                childAspectRatio: 0.8,
-                children: List.generate(
-                    snapshot.data!.length,
-                        (index) => productItem(snapshot.data![index],
-                            snapshot.data![index]['name'].toString().toUpperCase(),
-                        snapshot.data![index]['photoproduct'],context )),
-              );
-            } else {
-              return Center(child: CircularProgressIndicator(color: colorOfMainTheme,));
-            }
-          },
+          ],
         ),
-      )],
+      ),
+          Expanded(
+            child: FutureBuilder(
+              future: FirabaseService().GetProductsAll(),
+              builder: (context, AsyncSnapshot<List> snapshot) {
+                if (snapshot.hasData) {
+                  return current_user!.email == 'theteamflutterno1@gmail.com' ? Center(child: Text('Ürünler Sayfasını Görebilmek İçin Lütfen Üye Olunuz'),):GridView.count(
+
+
+                    scrollDirection: Axis.vertical,
+                    padding: EdgeInsets.all(8),
+                    crossAxisCount: MediaQuery.of(context).size.width>500 ? 8 : 3,
+                    crossAxisSpacing: 5,
+                    mainAxisSpacing: 5,
+                    childAspectRatio: 0.8,
+                    children: List.generate(
+                        snapshot.data!.length,
+                            (index) => productItem(snapshot.data![index],
+                            snapshot.data![index]['name'].toString().toUpperCase(),
+                            snapshot.data![index]['photoproduct'],context )),
+                  );
+                } else {
+                  return Center(child: CircularProgressIndicator(color: colorOfMainTheme,));
+                }
+              },
+            ),
+          ),
+
+
+        ],
       ),
     ));
   }
